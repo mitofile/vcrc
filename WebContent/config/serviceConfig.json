@@ -1,0 +1,8 @@
+{
+	"cuis": {
+	    "endpoint" : "http://10.116.82.250:25180/cuis/v3",
+		"allRecordings" : "/subscribers/{subscriberId}/users/{userId}/view/recordings",
+		"singleSeries" : "/subscribers/{subscriberId}/users/{userId}/view/series/{id}",
+		"singleProgram" : "/subscribers/{subscriberId}/users/{userId}/view/recordings/{id}"
+	}
+}

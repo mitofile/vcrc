@@ -1,0 +1,33 @@
+{
+	"channels": [{
+		"station_channel_id": "1",
+		"station_id": "1",
+		"channelId": 1,
+		"call_sign": "HBO",
+		"uri": "epgnavigator.dyndns.tv:8080/hls/cptv/index.m3u8"
+	}, {
+		"station_channel_id": "2",
+		"station_id": "2",
+		"channelId": 2,
+		"call_sign": "HBO",
+		"uri": "epgnavigator.dyndns.tv:8080/live/cptv/index.m3u8"
+	}, {
+		"station_channel_id": "3",
+		"station_id": "3",
+		"channelId": 3,
+		"call_sign": "HBO",
+		"uri": ""
+	}, {
+		"station_channel_id": "4",
+		"station_id": "4",
+		"channelId": 4,
+		"call_sign": "HBO",
+		"uri": ""
+	}, {
+		"station_channel_id": "5",
+		"station_id": "5",
+		"channelId": 5,
+		"call_sign": "HBO",
+		"uri": ""
+	}]
+}

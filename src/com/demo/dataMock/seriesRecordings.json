@@ -1,0 +1,298 @@
+{
+	"responseHeader": {
+		"Date": [
+			["Wed, 06 Jan 2016 14:10:17 GMT"]
+		],
+		"Transfer-Encoding": [
+			["chunked"]
+		],
+		"Content-Type": [
+			["application/json;charset=UTF-8"]
+		],
+		"Connection": [
+			["keep-alive"]
+		],
+		"Server": [
+			["nginx/1.8.0"]
+		],
+		"null": [
+			["HTTP/1.1 200 OK"]
+		]
+	},
+	"entities": [{
+		"id": "1",
+		"type": "SubscriberEventRecording",
+		"status": {
+			"state": "SCHEDULED"
+		},
+		"start": "2016-01-07T19:18:50.049Z",
+		"end": "2016-01-07T19:18:50.049Z",
+		"eventStart": "2016-01-07T19:18:50.049Z",
+		"eventEnd": "2016-01-07T19:18:50.049Z",
+		"createdOn": "2016-01-07T19:18:50.049Z",
+		"lastModified": "2016-01-07T19:18:50.049Z",
+		"subscriberId": "string",
+		"user": "Hong",
+		"airingId": "467852774",
+		"programId": "11",
+		"channelId": "23462",
+		"title": "Penny Goes away",
+		"episodeTitle": "Penny Goes away",
+		"program": {
+			"id": 0,
+			"uri": "string"
+		},
+		"parent": {
+			"id": 1,
+			"uri": "string"
+		},
+		"size": 0,
+		"duration": 0,
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"accept": "FIRST_RUN_ONLY",
+			"episodeLimit": 0,
+			"startOffset": 0,
+			"endOffset": 0
+		},
+		"retentionExpiryDate": "2016-01-07T19:18:50.049Z",
+		"recordingId": "1234",
+		"undeleteExpiryDate": "2016-01-07T19:18:50.050Z",
+		"effectiveStart": "2016-01-07T19:18:50.050Z",
+		"effectiveEnd": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingStart": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingEnd": "2016-01-07T19:18:50.050Z",
+		"scope": "PRIVATE",
+		"subscriberUniqueCopyRecordingId": "string"
+	},
+	{
+		"id": "2",
+		"type": "SubscriberEventRecording",
+		"status": {
+			"state": "CAPTURING"
+		},
+		"start": "2016-01-07T19:18:50.049Z",
+		"end": "2016-01-07T19:18:50.049Z",
+		"eventStart": "2016-01-07T19:18:50.049Z",
+		"eventEnd": "2016-01-07T19:18:50.049Z",
+		"createdOn": "2016-01-07T19:18:50.049Z",
+		"lastModified": "2016-01-07T19:18:50.049Z",
+		"subscriberId": "string",
+		"user": "Hong",
+		"airingId": "548796675",
+		"programId": "22",
+		"channelId": "123",
+		"title": "Penny Goes away",
+		"episodeTitle": "Sheldon Freke",
+		"program": {
+			"id": 0,
+			"uri": "string"
+		},
+		"parent": {
+			"id": 1,
+			"uri": "string"
+		},
+		"size": 0,
+		"duration": 0,
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"accept": "FIRST_RUN_ONLY",
+			"episodeLimit": 0,
+			"startOffset": 0,
+			"endOffset": 0
+		},
+		"retentionExpiryDate": "2016-01-07T19:18:50.049Z",
+		"recordingId": "1234",
+		"undeleteExpiryDate": "2016-01-07T19:18:50.050Z",
+		"effectiveStart": "2016-01-07T19:18:50.050Z",
+		"effectiveEnd": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingStart": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingEnd": "2016-01-07T19:18:50.050Z",
+		"scope": "PRIVATE",
+		"subscriberUniqueCopyRecordingId": "string"
+	},
+	{
+		"id": "3",
+		"type": "SubscriberEventRecording",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"start": "2016-01-07T19:18:50.049Z",
+		"end": "2016-01-07T19:18:50.049Z",
+		"eventStart": "2016-01-07T19:18:50.049Z",
+		"eventEnd": "2016-01-07T19:18:50.049Z",
+		"createdOn": "2016-01-07T19:18:50.049Z",
+		"lastModified": "2016-01-07T19:18:50.049Z",
+		"subscriberId": "string",
+		"user": "Hong",
+		"airingId": "222222",
+		"programId": "2342",
+		"channelId": "123",
+		"title": "Sheldon is a Genious",
+		"episodeTitle": "Sheldon is a Genious",
+		"program": {
+			"id": 0,
+			"uri": "string"
+		},
+		"parent": {
+			"id": 1,
+			"uri": "string"
+		},
+		"size": 0,
+		"duration": 0,
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"accept": "FIRST_RUN_ONLY",
+			"episodeLimit": 0,
+			"startOffset": 0,
+			"endOffset": 0
+		},
+		"retentionExpiryDate": "2016-01-07T19:18:50.049Z",
+		"recordingId": "1234",
+		"undeleteExpiryDate": "2016-01-07T19:18:50.050Z",
+		"effectiveStart": "2016-01-07T19:18:50.050Z",
+		"effectiveEnd": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingStart": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingEnd": "2016-01-07T19:18:50.050Z",
+		"scope": "PRIVATE",
+		"subscriberUniqueCopyRecordingId": "string"
+	},
+	{
+		"id": "4",
+		"type": "SubscriberEventRecording",
+		"status": {
+			"state": "CONFLICT"
+		},
+		"start": "2016-01-07T19:18:50.049Z",
+		"end": "2016-01-07T19:18:50.049Z",
+		"eventStart": "2016-01-07T19:18:50.049Z",
+		"eventEnd": "2016-01-07T19:18:50.049Z",
+		"createdOn": "2016-01-07T19:18:50.049Z",
+		"lastModified": "2016-01-07T19:18:50.049Z",
+		"subscriberId": "string",
+		"user": "Hong",
+		"airingId": "222222",
+		"programId": "2342",
+		"channelId": "123",
+		"title": "Kunterphali is dead",
+		"episodeTitle": "Kunterphali is dead",
+		"program": {
+			"id": 0,
+			"uri": "string"
+		},
+		"parent": {
+			"id": 1,
+			"uri": "string"
+		},
+		"size": 0,
+		"duration": 0,
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"accept": "FIRST_RUN_ONLY",
+			"episodeLimit": 0,
+			"startOffset": 0,
+			"endOffset": 0
+		},
+		"retentionExpiryDate": "2016-01-07T19:18:50.049Z",
+		"recordingId": "1234",
+		"undeleteExpiryDate": "2016-01-07T19:18:50.050Z",
+		"effectiveStart": "2016-01-07T19:18:50.050Z",
+		"effectiveEnd": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingStart": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingEnd": "2016-01-07T19:18:50.050Z",
+		"scope": "PRIVATE",
+		"subscriberUniqueCopyRecordingId": "string"
+	},
+	{
+		"id": "5",
+		"type": "SubscriberEventRecording",
+		"status": {
+			"state": "ERROR"
+		},
+		"start": "2016-01-07T19:18:50.049Z",
+		"end": "2016-01-07T19:18:50.049Z",
+		"eventStart": "2016-01-07T19:18:50.049Z",
+		"eventEnd": "2016-01-07T19:18:50.049Z",
+		"createdOn": "2016-01-07T19:18:50.049Z",
+		"lastModified": "2016-01-07T19:18:50.049Z",
+		"subscriberId": "string",
+		"user": "Hong",
+		"airingId": "222222",
+		"programId": "2342",
+		"channelId": "123",
+		"title": "Leonard backs again",
+		"episodeTitle": "Leonard backs again",
+		"program": {
+			"id": 0,
+			"uri": "string"
+		},
+		"parent": {
+			"id": 1,
+			"uri": "string"
+		},
+		"size": 0,
+		"duration": 0,
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"accept": "FIRST_RUN_ONLY",
+			"episodeLimit": 0,
+			"startOffset": 0,
+			"endOffset": 0
+		},
+		"retentionExpiryDate": "2016-01-07T19:18:50.049Z",
+		"recordingId": "1234",
+		"undeleteExpiryDate": "2016-01-07T19:18:50.050Z",
+		"effectiveStart": "2016-01-07T19:18:50.050Z",
+		"effectiveEnd": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingStart": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingEnd": "2016-01-07T19:18:50.050Z",
+		"scope": "PRIVATE",
+		"subscriberUniqueCopyRecordingId": "string"
+	},
+	{
+		"id": "6",
+		"type": "SubscriberEventRecording",
+		"status": {
+			"state": "DELETED"
+		},
+		"start": "2016-01-07T19:18:50.049Z",
+		"end": "2016-01-07T19:18:50.049Z",
+		"eventStart": "2016-01-07T19:18:50.049Z",
+		"eventEnd": "2016-01-07T19:18:50.049Z",
+		"createdOn": "2016-01-07T19:18:50.049Z",
+		"lastModified": "2016-01-07T19:18:50.049Z",
+		"subscriberId": "string",
+		"user": "Hong",
+		"airingId": "222222",
+		"programId": "2342",
+		"channelId": "123",
+		"title": "Howard Wolowitz is gay",
+		"episodeTitle": "Howard Wolowitz is gay",
+		"program": {
+			"id": 0,
+			"uri": "string"
+		},
+		"parent": {
+			"id": 1,
+			"uri": "string"
+		},
+		"size": 0,
+		"duration": 0,
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"accept": "FIRST_RUN_ONLY",
+			"episodeLimit": 0,
+			"startOffset": 0,
+			"endOffset": 0
+		},
+		"retentionExpiryDate": "2016-01-07T19:18:50.049Z",
+		"recordingId": "1234",
+		"undeleteExpiryDate": "2016-01-07T19:18:50.050Z",
+		"effectiveStart": "2016-01-07T19:18:50.050Z",
+		"effectiveEnd": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingStart": "2016-01-07T19:18:50.050Z",
+		"effectiveRecordingEnd": "2016-01-07T19:18:50.050Z",
+		"scope": "PRIVATE",
+		"subscriberUniqueCopyRecordingId": "string"
+	}]
+}

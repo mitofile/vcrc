@@ -1,0 +1,47 @@
+{
+	"responseHeader": {
+		"Date": [
+			["Wed, 06 Jan 2016 14:10:17 GMT"]
+		],
+		"Transfer-Encoding": [
+			["chunked"]
+		],
+		"Content-Type": [
+			["application/json;charset=UTF-8"]
+		],
+		"Connection": [
+			["keep-alive"]
+		],
+		"Server": [
+			["nginx/1.8.0"]
+		],
+		"null": [
+			["HTTP/1.1 200 OK"]
+		]
+	},
+	"entities": [ {
+		"recordings": [],
+		"id": "1",
+		"name": "The Big Bang Theory",
+		"type": "SERIES_RECORDING_SET",
+		"scope": "PRIVATE",
+		"status": "ACTIVE",
+		"metadata": {},
+		"recordingsURI": "/subscribers/HongTest1/users/hong/recordingsets/1/recordings",
+		"createdOn": "2016-01-08T18:42:32.368Z",
+		"lastModified": "2016-01-08T18:42:32.368Z",
+		"options": {
+			"retentionHours": 0,
+			"copyType": "UNIQUE_COPY",
+			"spaceConflictPolicy": {},
+			"accept": "FIRST_RUN_ONLY",
+			"episodeLimit": "UNLIMITED",
+			"startOffset": 0,
+			"endOffset": 0
+		},
+		"seriesId": "123",
+		"channelId": "342",
+		"subscriberId": "HongTest1",
+		"userId": "hong"
+	}]
+}

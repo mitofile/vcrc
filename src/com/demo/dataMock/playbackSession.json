@@ -1,0 +1,48 @@
+{
+    "subscriberRecordingId": "95be7a81-beeb-4c27-b435-b5ea33315132",
+    "playbackUriType": "HLS",
+    "status": "ACTIVE",
+    "lastUpdated": "2015-11-13T15:24:51.737Z",
+    "type": "DVR",
+    "headerResponse": {
+        "Date": [
+            [
+                "Fri, 13 Nov 2015 15:24:51 GMT"
+            ]
+        ],
+        "Content-Length": [
+            [
+                "697"
+            ]
+        ],
+        "Content-Type": [
+            [
+                "application/json; charset=utf-8"
+            ]
+        ],
+        "Connection": [
+            [
+                "close"
+            ]
+        ],
+        "X-Powered-By": [
+            [
+                "Express"
+            ]
+        ],
+        "null": [
+            [
+                "HTTP/1.1 201 Created"
+            ]
+        ]
+    },
+    "header": "{\"X-Arris-CorrelationId\":\"9c545cfe-065a-40ea-8b05-dbbc433afff3\",\"X-ARRIS-Subscriber\":\"lucasTest\",\"X-Arris-Source\":\"VCR-C\"}",
+    "sessionId": "564600c38f1f016000472c57",
+    "playbackUri": "http://10.184.15.101:18082/9cad0c4619634de68a2550b76914c0ee.m3u8",
+    "recordingId": "4ea29275c9784d57b708a6b38bd79894",
+    "timeoutWindow": 45,
+    "subscriberId": "lucasTest",
+    "creationTime": "2015-11-13T15:24:51.737Z",
+    "offset": 140,
+    "deviceId": "Unknown"
+}

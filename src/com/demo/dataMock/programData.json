@@ -1,0 +1,110 @@
+{
+    "startTime": "2015-07-29T12:00:00Z",
+    "id": "6",
+    "title": "Today",
+    "duration": 240,
+    "programId": "EP019152141054",
+    "restrictions": {},
+    "endTime": "2015-07-29T16:00:00Z",
+    "airingId": "EP019152141054_11670_2015-07-29T12:00:00Z",
+    "seriesId": "184072",
+    "channel": {
+        "id": "11670",
+        "uri": "/cs/v3/channels/11670"
+    },
+    "header": "{X-Arris-CorrelationId: b016bd1b-e30c-4e85-97ea-cbd930945877, X-Arris-Source: VCR-C}",
+    "metadata": {
+        "startTime": "2015-07-29T12:00:00Z",
+        "id": "EP019152141054_11670_2015-07-29T12:00:00Z",
+        "program": {
+            "id": "EP019152141054",
+            "title": {
+                "en": "Today"
+            },
+            "cast": [
+                {
+                    "lastName": "Lauer",
+                    "role": "Anchor",
+                    "firstName": "Matt"
+                },
+                {
+                    "lastName": "Guthrie",
+                    "role": "Anchor",
+                    "firstName": "Savannah"
+                },
+                {
+                    "lastName": "Roker",
+                    "role": "Anchor",
+                    "firstName": "Al"
+                },
+                {
+                    "lastName": "Morales",
+                    "role": "Anchor",
+                    "firstName": "Natalie"
+                },
+                {
+                    "lastName": "Geist",
+                    "role": "Anchor",
+                    "firstName": "Willie"
+                },
+                {
+                    "lastName": "Hall",
+                    "role": "Anchor",
+                    "firstName": "Tamron"
+                },
+                {
+                    "lastName": "Daly",
+                    "role": "Anchor",
+                    "firstName": "Carson"
+                },
+                {
+                    "lastName": "Gifford",
+                    "role": "Anchor",
+                    "firstName": "Kathie Lee"
+                },
+                {
+                    "lastName": "Kotb",
+                    "role": "Anchor",
+                    "firstName": "Hoda"
+                },
+                {
+                    "lastName": "Vazquez",
+                    "role": "Guest",
+                    "firstName": "Lilliana"
+                },
+                {
+                    "lastName": "Milloy",
+                    "role": "Guest",
+                    "firstName": "Brandi"
+                },
+                {
+                    "lastName": "Pegg",
+                    "role": "Guest",
+                    "firstName": "Simon"
+                },
+                {
+                    "lastName": "Pharoah",
+                    "role": "Guest",
+                    "firstName": "Jay"
+                }
+            ],
+            "genres": [
+                "Talk",
+                "News"
+            ],
+            "originalAirDate": "2015-07-29",
+            "description": {
+                "en": "Style expert Lilliana Vazquez; TV host Brandi Milloy; fitness trends; actor Simon Pegg; pop fix; family care; actor Jay Pharoah; National Lipstick Day; big box deals."
+            },
+            "programType": "Series",
+            "seriesId": "184072",
+            "_self": "http://172.17.0.7:25141/ems/v1/programs/EP019152141054"
+        },
+        "seasonId": null,
+        "stationId": "11670",
+        "endTime": "2015-07-29T16:00:00Z",
+        "seriesId": "184072",
+        "_self": "http://172.17.0.7:25141/ems/v1/events/EP019152141054_11670_2015-07-29T12:00:00Z?expand=full",
+        "ratings": []
+    }
+}

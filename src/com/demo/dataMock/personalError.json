@@ -1,0 +1,52 @@
+{
+    "entities": [
+        {
+            "id": "1",
+            "type": "EVENT",
+            "status": {
+                "state": "ERROR"
+            },
+            "start": "2015-07-29T15:00:00Z",
+            "end": "2015-07-29T16:00:00Z",
+            "eventStart": "2015-07-29T15:00:00Z",
+            "eventEnd": "2015-07-29T16:00:00Z",
+            "createdOn": "2015-07-29T15:00:00Z",
+            "lastModified": "2015-07-29T15:00:00Z",
+            "user": "family",
+            "airingId": "EP000043720738_11299_2015-07-29T15:00:00Z",
+            "programId": "EP000043720738",
+            "channelId": "HBO",
+            "title": "The Price Is Right",
+            "program": "/programs/xyz",
+            "size": 411,
+            "options": {
+                "spaceConflictPolicy": "UNTIL_SPACE_NEEDED"
+            },
+            "expireDate": "2017-07-29T16:00:00Z"
+        },
+        {
+            "id": "0",
+            "type": "EVENT",
+            "status": {
+                "state": "ERROR"
+            },
+            "start": "2015-07-29T16:00:00Z",
+            "end": "2015-07-29T16:30:00Z",
+            "eventStart": "2015-07-29T16:00:00Z",
+            "eventEnd": "2015-07-29T16:30:00Z",
+            "createdOn": "2015-07-29T16:00:00Z",
+            "lastModified": "2015-07-29T16:00:00Z",
+            "user": "family",
+            "airingId": "SH003523740000_11299_2015-07-29T16:00:00Z",
+            "programId": "SH003523740000",
+            "channelId": "HBO",
+            "title": "CBS 2 News",
+            "program": "/programs/xyz",
+            "size": 411,
+            "options": {
+                "spaceConflictPolicy": "UNTIL_SPACE_NEEDED"
+            },
+            "expireDate": "2017-07-29T16:30:00Z"
+        }
+    ]
+}

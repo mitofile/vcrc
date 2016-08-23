@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- env:prod --#>
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <script src="js/app.min.js"></script>
+    <!-- env:prod:end -->
+
+    <!-- env:dev -->
+  <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+  <!--<link rel="stylesheet" type="text/css" href="js/thrid-party/videojs-hls/node_modules/video-js.css" />-->
+  <!-- video.js -->
+  <script src="js/thrid-party/videojs-hls/video.dev.js"></script>
+    <!-- Media Sources plugin -->
+  <script src="js/thrid-party/videojs-hls/videojs-media-sources.js"></script>
+    <!-- HLS plugin -->
+  <script src="js/thrid-party/videojs-hls/videojs-hls.js"></script>
+  
+    <!-- segment handling -->
+  <script src="js/thrid-party/videojs-hls/xhr.js"></script>
+  <script src="js/thrid-party/videojs-hls/flv-tag.js"></script>
+  <script src="js/thrid-party/videojs-hls/stream.js"></script>
+  <script src="js/thrid-party/videojs-hls/exp-golomb.js"></script>
+  <script src="js/thrid-party/videojs-hls/h264-extradata.js"></script>
+  <script src="js/thrid-party/videojs-hls/h264-stream.js"></script>
+  <script src="js/thrid-party/videojs-hls/aac-stream.js"></script>
+  <script src="js/thrid-party/videojs-hls/metadata-stream.js"></script>
+  <script src="js/thrid-party/videojs-hls/segment-parser.js"></script>
+  
+  <!-- m3u8 handling -->
+  <script src="js/thrid-party/videojs-hls/m3u8/m3u8-parser.js"></script>
+  <script src="js/thrid-party/videojs-hls/playlist.js"></script>
+  <script src="js/thrid-party/videojs-hls/playlist-loader.js"></script>
+  <script src="js/thrid-party/videojs-hls/pkcs7.unpad.js"></script>
+  <script src="js/thrid-party/videojs-hls/decrypter.js"></script>
+  <script src="js/thrid-party/videojs-hls/bin-utils.js"></script>
+ 
+  
+  <script>
+    videojs.options.flash.swf = 'js/thrid-party/videojs-hls/video-js.swf';
+  </script>
+    
+    <link rel="stylesheet" href="css/thrid-party/bootstrap.css">
+    <link rel="stylesheet" href="css/thrid-party/jquery-ui.css" />
+    <link rel="stylesheet" href="css/thrid-party/jjsonviewer.css" />
+    <link rel="stylesheet" href="css/thrid-party/jquery.bootstrap-touchspin.css" />
+    <link rel="stylesheet" href="css/new_style.css">
+
+
+    <script src="js/thrid-party/MWU-1.0.0.js"></script>
+    <script src="js/thrid-party/MWL-1.0.0.js"></script>
+    <script src="js/thrid-party/jquery-1.10.2.js"></script>
+    <script src="js/thrid-party/jquery-ui-1.10.4.min.js"></script>
+    <script src="js/thrid-party/bootstrap.min.js"></script>
+    <script src="js/thrid-party/request-promise/errors.js"></script>
+    <script src="js/thrid-party/request-promise/rp.js"></script>
+    <script src="js/cuisService.js"></script>
+    <script src="js/ndvrInfoItem.js"></script>
+    <script src="js/ndvrRecord.js"></script>
+    <script src="js/ndvrSeries.js"></script>
+    <script src="js/ndvrManager.js"></script>
+    <script src="js/ndvrCatchup.js"></script>
+    <script src="js/thrid-party/jjsonviewer.js"></script>
+    <script src="js/testMonitorController.js"></script>
+    <script src="js/new_main.js"></script>
+    <script src="js/keynavigator.js"></script>
+    <script src="js/thrid-party/jquery.velocity.min.js"></script>
+    <script src="js/thrid-party/underscore-min.js"></script>
+    <script src="js/thrid-party/jquery.bootstrap-touchspin.js"></script>
+    <!-- env:dev:end -->
+
+</head>
+
+<body X-Navigation="0">
+<div class="container-fluid">
+    <div class="row mainNdvrPage" id="mainNdvrPage">
+        <div class="col-md-18">
+            <div class="row-fluid ndvrSection">
+                <div class="row rowTitle">
+
+                    <div class="col-md-18 clearfix">
+                        <h3 id="headerTitle" class="title">RECORDINGS</h3>
+                        <span id="loadingIconHeader" class="loading-icon">
+                            <img src="css/images/loading-spinner.gif" alt="loading icon" />
+                        </span>
+                        <span class="headerBackLabel activeHeader hide">Press "Back" for Categories</span>
+                        <span class="headerOptionsLabel activeHeader">Press "Left Arrow" on the remote control to access OPTIONS</span>
+                        <span id="linkIconHeader" class="link-icon">
+                            <img src="css/images/linkAvailable.png" />
+                        </span>
+                    </div>
+
+                </div>
+                <div class="row">
+						<div class="nav-options-bar-container" id="navOptionsBarContainer">
+							<div id="navOptionContent" class="navOptionContent">
+								<nav class="left_menu_option">
+									<ul id="optionsUl">
+					
+									</ul>
+								</nav>
+
+							</div>
+						</div>
+						<div class="nav-bar-container" id="navBarContainer" >
+							<div id="navContent" class="navContent">
+								<nav class="left_menu">
+									<ul></ul>
+								</nav>
+							</div>
+				             <!--  <div class="myGuide">
+		                         <a href="" class="guideAccessLink" id="my_Guide"><img src="css/images/stopwatch-iw.png">            EPG Guide</a>    
+	                          </div>  -->
+						</div>
+						<div class="ndvr-container ndvrContainer" id="ndvrContainer" tabindex="1">
+                       	 <div class="scrollContainer" id="scrollContainer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row info-series-page" id="infoSeriesNdvrPage">
+        <div class="col-md-18 infoLeft">
+            <div class="row infoRow">
+                <div class="col-md-8 series-info-panel">
+                    <h2 id="collectionLabel" class="episodes-label">EPISODES</h2>
+                    <ul id="episodeList" class="list-unstyled infoOptionsAssetMenu info-options-container"></ul>
+                </div>
+                <div class="col-md-10 main-series-info">
+				  <div class="row">
+				     <div class="col-md-5 ">
+                        <img id="seriesImg" class="info-series-img" src="">
+                    </div>
+                    <div class="col-md-offset-1 col-md-11 infoDetails">
+
+                        <h5>
+                            <span class="infoMainTitle"></span>
+                        </h5>
+
+                        <h5>
+                            <span class="infoSubTitle">"</span>
+                        </h5>
+
+                        <p id="infoSeriesSinopsys"></p>
+
+
+                        <div class="info-series-about" >
+                            <span id="seriesYear" class="infoTvRating aditional-info"></span>
+                        </div>
+
+                        <div class="info-series-about" >
+                            <span id="seriesRepeat" class="infoTvRating aditional-info"></span>
+                        </div>
+
+                        <div class="info-series-about" >
+                            <span id="seriesRate" class="infoTvRating"></span>
+                        </div>
+                    </div>
+				   </div>
+				   <div class="row">
+				   <div class="col-md-offset-5 col-md-13">
+				       <ul class="list-unstyled info-options-container seriesAction" id="infoListSeries">
+				       </ul>
+				    </div>   
+				   </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row info-ndvr-page" id="infoNdvrPage">
+        <div class="col-md-18 infoLeft">
+            <div class="infoRow">
+                <div class="col-md-10 left-info-panel">
+                    <div class="row">
+                        <div id="assetMetadataInfo" class="col-md-5 ">
+                            <div id="infoBgImage" class="infoBgImage">
+                                <span id="infoImgTitle" class="infoImgTitle"></span>
+                            </div>
+                            <img class="infoitemImg" src="">
+
+                        </div>
+                        <div class="col-md-offset-1 col-md-11 infoDetails">
+                            <h5>
+                            	<span class="infoTitleContent">
+                                	<span class="infoRedDot">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                	<span class="infoMainTitle"></span>
+                                </span>
+                            </h5>
+                            <h5>
+                                <span class="infoSubTitle"></span>
+                            </h5>
+                            <p id="infoSinopsys"></p>
+							<div class="infoTvRatingContainer" >
+								<span id="infoTvRating" class="infoTvRating"></span>
+							</div>
+                        </div>
+                    </div>
+                    <div class="row padding-top-10">
+                        <div class="col-md-5 infoChnIcon" style="">
+
+                            <div class="col-md-10 infoChnNumber">
+                                <h4>
+                                    <span id="infoChnNumber" class="infoChnNumberSpan"></span>
+                                </h4>
+                            </div>
+
+                            <div class="col-md-8">
+                                <img class="img-responsive itemChnLogo" src="css/images/history-logo.png">
+                            </div>
+
+                        </div>
+                        <div class="col-md-offset-1 col-md-11 producers-info" style="" id="producersInfo">
+                            <h5>
+                                <span class="infolabel">Producers:</span>
+                            </h5>
+                            <span id="producersCrew"></span>
+                        </div>
+                        <div class="col-md-offset-1 col-md-11 cast-info" style="" id="castInfo">
+                            <h5>
+                                <span class="infolabel">Cast:</span>
+                            </h5>
+                            <span id="castCrew"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 " style="" >
+                            <h4 id="infoRecDate" class="infoRecDate"></h4>
+                            <h4 id="infoHoursDate"></h4>
+
+                        </div>
+                        <div class=" col-md-offset-1 col-md-11 " style="" id="1350">
+                            <h4>
+                                <span id="airDateLabel" class="infolabel">Original Air Date:</span>
+                                <span id="infoAirDate"></span>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 right-info-panel">
+                    <ul class="list-unstyled infoOptionsAssetMenu info-options-container" id="infoListOptions">
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row videoContainer" id="videoContainer" style="display: none;">
+        <div id="videoContent" tabindex='4' class="videoContent">
+            <!--<div class="loadingContent">
+                <div class="loadingIconContent">
+                    <img class="img-responsive" src="/vcrc/css/images/loadingIcon.gif">
+                </div>
+                <div class="loadingTextContent">
+                    <span class="loadingTextSpan">Loading...</span>
+                </div>
+            </div>
+            <div id="player_controls">
+                <div class="time_start"></div>
+                <div class="time_current"></div>
+                <div class="time_end"></div>
+                <a href="" id="status_icon" class="play"></a>
+                <div class="playbar">
+                    <div class="buffer"></div>
+                    <div class="position"></div>
+                    <div class="info">
+                 	   <p class="current_time"></p>
+                 	   <div class="arrow_down"></div>
+             	   </div>
+                </div>               
+            </div>-->
+        </div>
+    </div>
+    
+	<div id="testMonitor" title="Test Monitor">
+	</div>
+      	<!-- 
+  MODAL INFO SCREEN
+  -->
+  <div class="modal fade" id="modalSeriesOptions" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="modalSeriesOptions" aria-hidden="true">
+    <div class="modal-dialog modal-xs modal-sm modal-lg">
+      <div class="modalOption-content">
+
+        <div class="modal-header">
+          <span id="labelOption">Series Options</span>
+          <hr class = "headerTitle">
+        </div>
+
+        <div class="modal-body-message bodyScheduleOption" id="modalScheduleOption_body">
+            <div class="modalContentOption">
+              <div class="row">
+                <div class="form-group row">
+                  <div class="col-sm-4"><span id="Start" class="labelIncremental">Start</span></div>
+                  <div class="col-sm-10"><input id="Start" type="text" value="" readonly="readonly" name="Start"></div>
+              	</div>
+              </div>
+              <div class="row">
+                <div class="form-group row">
+                  <div class="col-sm-4"><span id="End" class="labelIncremental">Stop</span></div>
+                  <div class="col-sm-10"><input id="End" type="text" value="" readonly="readonly" name="End"></div>
+              	</div>  
+              </div>
+              <div class="row">
+                <div class="form-group row">
+                  <div class="col-sm-4"><span id="Keep" class="labelIncremental">Keep</span></div>
+                  <div class="col-sm-10"><input id="Keep" type="text" value="" readonly="readonly" name="Keep"></div>
+                </div>
+              </div>
+            </div>
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  END MODAL INFO SCREEN
+  -->
+  <!--  
+    MODAL INFO SCREEN
+  -->
+  <div class="modal fade" id="friendsSearch" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="modalSeriesOptions" aria-hidden="true">
+    <div class="modal-dialog modal-xs modal-sm modal-lg">
+      <div class="modalOption-contentFriend">
+
+        <div class="modal-header">
+          <span>Search a friends</span>
+          <hr class = "headerTitle">
+        </div>
+
+        <div class="modal-body-message bodyScheduleOption" id="modalScheduleOption_body">
+            <div class="modalContentOptionFriend">
+              <div class="row searchFriend">
+				<div class="form-group row">
+				   <div class="col-sm-8"></div>
+                  <div class="col-sm-4"><span id="Search" class="labelIncrementalFriend">Search</span></div>
+                  <div class="col-sm-4"><input type="text"></div>
+                </div>
+              </div>
+              <div class="row rowFriends">
+              	<div class="form-group row">
+              	<div class="col-sm-4">
+					<img src="posterImage/friends/cacus.jpg" class="img-circle friendImage" alt="imagen circular" />
+					<span class="friendLabel">Juan</span>
+				 </div>	
+				 <div class="col-sm-4">
+					<img src="posterImage/friends/canovas.jpg" class="img-circle friendImage" alt="imagen circular" />
+					<span  class="friendLabel">Damian</span>
+				 </div>
+				 <div class="col-sm-4">
+					<img src="posterImage/friends/dopa.jpg" class="img-circle friendImage" alt="imagen circular" />
+					<span class="friendLabel">Ruben</span>
+				 </div>
+				 <div class="col-sm-4">
+					<img src="posterImage/friends/Joche.jpg" class="img-circle friendImage" alt="imagen circular" />
+					<span class="friendLabel">Jose</span>
+				 </div>			
+              	</div>
+               </div>
+              <div class="row rowFriends">
+              	<div class="form-group row">
+              	<div class="col-sm-4">
+					<img src="posterImage/friends/flor.jpg" class="img-circle friendImage" alt="imagen circular" />
+					<span class="friendLabel">Florencia</span>
+				 </div>	
+				 <div class="col-sm-4">
+					<img src="posterImage/friends/alfredo.jpg" class="img-circle friendImage" alt="imagen circular" />
+					<span  class="friendLabel">Alfredo</span>
+				 </div>
+				 <div class="col-sm-4">
+					<img src="posterImage/friends/gabriel.jpg" class="img-circle friendImage" alt="imagen circular" />
+					<span class="friendLabel">Gabriel</span>
+				 </div>
+				 <div class="col-sm-4">
+					<img src="posterImage/friends/Manuel.jpg" class="img-circle friendImage" alt="imagen circular" />
+					<span class="friendLabel">Manuel</span>
+				 </div>			
+              	</div>
+              </div>
+        	  <div class="modal-footerFriend">
+          		<button type="button" class="btn btn-default butonCloseStyle" data-dismiss="modal">Close</button>
+        	  </div>
+            </div>
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  END MODAL INFO SCREEN
+  -->
+  
+  <!-- 
+  MODAL RESUME SCREEN
+  -->
+  <div class="modal fade" id="modalResumeAt" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="modalResumeAt" aria-hidden="true">
+    <div class="modal-dialog modal-xs modal-sm modal-lg">
+      <div class="modalResume-content">
+
+        <div class="modal-header labelResumeAt">
+          <span>Resume Playback</span>
+          <hr class = "headerTitle">
+        </div>
+        <div class="modal-body-message bodyResumeAt" id="modalResumeAt_body">
+            <div class="modalContentOption">
+              <div class="row">
+			    <span class="labelIncremental labelResumeAt">Watched</span>
+			  </div>
+			  <div class="rowResumeValue">
+			    <span class="watched" id="watched">0 minute</span>
+			    <div class="progress progressResumeAt">
+                  <div id="progressBarResume" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
+			    </div>
+			  </div>
+			  <div class="totalVideo labelResumeAt">
+			    <span id=totalTime>00:00:00</span>
+			  </div>
+            </div>
+          <!--</div>-->
+        </div>
+        <div class="modalResumeAt-footer">
+           <button id="resumeVideo" class="btn btn-default buttonModal resumeAt">Resume</button>
+		   <button id="restartViedo"class="btn btn-default buttonModal resumeAt">Restart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  END MODAL INFO SCREEN
+  -->
+  
+  
+</div>
+
+
+<script id="episodeTemplate" type="text/x-handlebars-template">
+
+    <% _.each(data,function(item){ %>
+    <li id="<%= item.id %>">
+        <span class="episode-date"><%= item.dateUnderPoster.split(',')[1].split("/")[1].length>1?item.dateUnderPoster.split(',')[1]:item.dateUnderPoster.split(',')[1].split("/")[0] + ('/0' + item.dateUnderPoster.split(',')[1].split("/")[1]) %></span>
+		<span class="spanEpisodeError"><img class="episodeStatus"></span>
+        <span class="series-name-"><%= item.episodeTitle %></span>
+    </li>
+    <% }) %>
+
+</script>
+
+<script id="programTemplate" type="text/x-handlebars-template">
+
+    <% _.each(data,function(item){ %>
+    <li id="<%= item.id %>">
+        <span class="episode-date"><%= item.formatedStart.split(',')[1] %></span>
+        <span class="program-name"><%= item.title %></span>
+    </li>
+    <% }) %>
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+{
+	"airingId": "472652710",
+	"programId": "813735",
+	"effectiveEnd": "2016-01-15T20:00:00Z",
+	"effectiveStart": "2016-01-15T19:00:00Z",
+	"recordingId": "98cec965b9a4431aa8631c9daa787930",
+	"programStartTime": "2016-01-15T19:00:00Z",
+	"eventStart": "2016-01-15T19:00:00Z",
+	"eventEnd": "2016-01-15T20:00:00Z",
+	"retentionExpiryDate": "2016-03-05T19:00:00Z",
+	"effectiveRecordingEnd": "2016-01-15T20:00:00Z",
+	"effectiveRecordingStart": "2016-01-15T19:00:00Z",
+	"duration": 60,
+	"scope": "PRIVATE",
+	"parent": {
+		"uri": "/cs/v3/recordingsets/ani20/",
+		"id": "ani20"
+	},
+	"size": 8.35,
+	"subscriberId": "ani20",
+	"program": {
+		"uri": "/cs/v3/programs/35795",
+		"id": 35795
+	},
+	"title": "To Be Announced",
+	"bookmarkOffset": 0,
+	"createdOn": "2016-01-15T18:14:31Z",
+	"channelId": "23462",
+	"lastModified": "2016-01-15T18:14:31Z",
+	"options": {
+		"endOffset": 0,
+		"startOffset": 0,
+		"spaceConflictPolicy": "UNTIL_SPACE_NEEDED"
+	},
+	"end": "2016-01-15T20:00:00Z",
+	"start": "2016-01-15T19:00:00Z",
+	"status": {
+		"state": "COMPLETED"
+	},
+	"id": "b402f39c-efee-4d77-9e29-ff6baaded1d6"
+}

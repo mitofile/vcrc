@@ -1,0 +1,378 @@
+{
+	"responseHeader": {
+		"ETag": [
+			["2015-11-30 16:00:18.635"]
+		],
+		"X-ARRS-QUOTA-TYPE": [
+			["MINUTES"]
+		],
+		"X-ARRS-QUOTA-MARKED-TO-KEEP": [
+			["0.0"]
+		],
+		"Date": [
+			["Mon, 30 Nov 2015 16:01:36 GMT"]
+		],
+		"Transfer-Encoding": [
+			["chunked"]
+		],
+		"X-ARRS-QUOTA-USED": [
+			["1984.69"]
+		],
+		"Content-Type": [
+			["application/json;charset=UTF-8"]
+		],
+		"Connection": [
+			["close"]
+		],
+		"Server": [
+			["Apache-Coyote/1.1"]
+		],
+		"X-ARRS-QUOTA-TOTAL": [
+			["2000.0"]
+		],
+		"null": [
+			["HTTP/1.1 200 OK"]
+		]
+	},
+	"entities": [{
+		"effectiveRecordingStart": "2015-11-30T16:00:18Z",
+		"scope": "PRIVATE",
+		"type": "SubscriberEventRecording",
+		"airingId": "478154672",
+		"eventEnd": "2015-11-30T16:30:00Z",
+		"id": "1",
+		"title": "Deleted1",
+		"programId": "20145550",
+		"recordingId": "1",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-30T16:30:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-30T16:00:18Z",
+		"eventStart": "2015-11-30T16:00:18Z",
+		"channelId": "1125",
+		"status": {
+			"state": "DELETED"
+		},
+		"effectiveEnd": "2015-11-30T16:30:00Z",
+		"programStartTime": "2015-11-30T16:00:00Z",
+		"effectiveRecordingEnd": "2015-11-30T16:30:00Z",
+		"size": 0.82,
+		"createdOn": "2015-11-30T16:00:18Z",
+		"duration": 29.69,
+		"start": "2015-11-30T16:00:18Z",
+		"program": {
+			"id": 138033,
+			"uri": "/cs/v3/programs/138033"
+		},
+		"effectiveStart": "2015-11-30T16:00:18Z",
+		"retentionExpiryDate": "2015-12-30T16:00:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T10:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Grandma's Kisses; Squidville",
+		"type": "SubscriberEventRecording",
+		"airingId": "434408559",
+		"eventEnd": "2015-11-27T11:00:00Z",
+		"id": "2",
+		"title": "Deleted2",
+		"programId": "2629897",
+		"recordingId": "2",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T11:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "DELETED"
+		},
+		"eventStart": "2015-11-27T10:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T11:00:00Z",
+		"subscriberUniqueCopyRecordingId": "cb9b1a1ee55246329291c4c884824dbc",
+		"programStartTime": "2015-11-27T10:30:00Z",
+		"effectiveRecordingEnd": "2015-11-27T11:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T10:30:00Z",
+		"program": {
+			"id": 113877,
+			"uri": "/cs/v3/programs/113877"
+		},
+		"effectiveStart": "2015-11-27T10:30:00Z",
+		"retentionExpiryDate": "2015-12-02T10:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T12:55:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Mooncation; Mr. Krabs Takes A Vacation",
+		"type": "SubscriberEventRecording",
+		"airingId": "434409110",
+		"eventEnd": "2015-11-27T13:30:00Z",
+		"id": "3",
+		"title": "Deleted3",
+		"programId": "20313486",
+		"recordingId": "3",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T13:30:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "DELETED"
+		},
+		"eventStart": "2015-11-27T13:00:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T13:30:00Z",
+		"subscriberUniqueCopyRecordingId": "42bab513b20146828ccc50f35e77b38d",
+		"programStartTime": "2015-11-27T13:00:00Z",
+		"effectiveRecordingEnd": "2015-11-27T13:35:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T13:00:00Z",
+		"program": {
+			"id": 113903,
+			"uri": "/cs/v3/programs/113903"
+		},
+		"effectiveStart": "2015-11-27T13:00:00Z",
+		"retentionExpiryDate": "2015-12-02T13:00:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T19:55:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Roller Cowards; Bucket Sweet Bucket",
+		"type": "SubscriberEventRecording",
+		"airingId": "486023774",
+		"eventEnd": "2015-11-27T20:30:00Z",
+		"id": "4",
+		"title": "Deleted4",
+		"programId": "6849405",
+		"recordingId": "4",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T20:30:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "DELETED"
+		},
+		"eventStart": "2015-11-27T20:00:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T20:30:00Z",
+		"subscriberUniqueCopyRecordingId": "0d55c65dbc25494396890918892c1393",
+		"programStartTime": "2015-11-27T20:00:00Z",
+		"effectiveRecordingEnd": "2015-11-27T20:35:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T20:00:00Z",
+		"program": {
+			"id": 133491,
+			"uri": "/cs/v3/programs/133491"
+		},
+		"effectiveStart": "2015-11-27T20:00:00Z",
+		"retentionExpiryDate": "2015-12-02T20:00:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T20:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "To Love a Patty; Breath of Fresh Squidward",
+		"type": "SubscriberEventRecording",
+		"airingId": "486023775",
+		"eventEnd": "2015-11-27T21:00:00Z",
+		"id": "5",
+		"title": "Deleted5",
+		"programId": "6859327",
+		"recordingId": "5",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T21:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "DELETED"
+		},
+		"eventStart": "2015-11-27T20:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T21:00:00Z",
+		"subscriberUniqueCopyRecordingId": "718627ef3cad4ff1abf827d07b42697d",
+		"programStartTime": "2015-11-27T20:30:00Z",
+		"effectiveRecordingEnd": "2015-11-27T21:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T20:30:00Z",
+		"program": {
+			"id": 133494,
+			"uri": "/cs/v3/programs/133494"
+		},
+		"effectiveStart": "2015-11-27T20:30:00Z",
+		"retentionExpiryDate": "2015-12-02T20:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T22:55:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "The Bully; Just One Bite",
+		"type": "SubscriberEventRecording",
+		"airingId": "434408566",
+		"eventEnd": "2015-11-27T23:30:00Z",
+		"id": "6",
+		"title": "Deleted6",
+		"programId": "3269008",
+		"recordingId": "6",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T23:30:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "DELETED"
+		},
+		"eventStart": "2015-11-27T23:00:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T23:30:00Z",
+		"subscriberUniqueCopyRecordingId": "e078a1bf1006454e852342be55612c16",
+		"programStartTime": "2015-11-27T23:00:00Z",
+		"effectiveRecordingEnd": "2015-11-27T23:35:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T23:00:00Z",
+		"program": {
+			"id": 113931,
+			"uri": "/cs/v3/programs/113931"
+		},
+		"effectiveStart": "2015-11-27T23:00:00Z",
+		"retentionExpiryDate": "2015-12-02T23:00:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T23:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "The Nasty Patty; The Idiot Box",
+		"type": "SubscriberEventRecording",
+		"airingId": "434408569",
+		"eventEnd": "2015-11-28T00:00:00Z",
+		"id": "7",
+		"title": "Deleted7",
+		"programId": "3279010",
+		"recordingId": "7",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-28T00:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:41Z",
+		"status": {
+			"state": "DELETED"
+		},
+		"eventStart": "2015-11-27T23:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-28T00:00:00Z",
+		"subscriberUniqueCopyRecordingId": "00dcc59cbeca449fa7109979683c5cfc",
+		"programStartTime": "2015-11-27T23:30:00Z",
+		"effectiveRecordingEnd": "2015-11-28T00:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:41Z",
+		"duration": 30,
+		"start": "2015-11-27T23:30:00Z",
+		"program": {
+			"id": 113935,
+			"uri": "/cs/v3/programs/113935"
+		},
+		"effectiveStart": "2015-11-27T23:30:00Z",
+		"retentionExpiryDate": "2015-12-02T23:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-28T10:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Pre-Hibernation Week; Life of Crime",
+		"type": "SubscriberEventRecording",
+		"airingId": "434408556",
+		"eventEnd": "2015-11-28T11:00:00Z",
+		"id": "8",
+		"title": "Deleted8",
+		"programId": "2689896",
+		"recordingId": "8",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-28T11:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:41Z",
+		"status": {
+			"state": "DELETED"
+		},
+		"eventStart": "2015-11-28T10:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-28T11:00:00Z",
+		"subscriberUniqueCopyRecordingId": "7f0eb05b990849aba7d6a18b03108a8e",
+		"programStartTime": "2015-11-28T10:30:00Z",
+		"effectiveRecordingEnd": "2015-11-28T11:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:41Z",
+		"duration": 30,
+		"start": "2015-11-28T10:30:00Z",
+		"program": {
+			"id": 113967,
+			"uri": "/cs/v3/programs/113967"
+		},
+		"effectiveStart": "2015-11-28T10:30:00Z",
+		"retentionExpiryDate": "2015-12-03T10:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-28T13:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Bubble Trouble; The Way of the Sponge",
+		"type": "SubscriberEventRecording",
+		"airingId": "434409128",
+		"eventEnd": "2015-11-28T14:00:00Z",
+		"id": "9",
+		"title": "Deleted9",
+		"programId": "21936166",
+		"recordingId": "9",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-28T14:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:41Z",
+		"status": {
+			"state": "DELETED"
+		},
+		"eventStart": "2015-11-28T13:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-28T14:00:00Z",
+		"subscriberUniqueCopyRecordingId": "8e62e00a0e784b76baf42b0989344a42",
+		"programStartTime": "2015-11-28T13:30:00Z",
+		"effectiveRecordingEnd": "2015-11-28T14:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:41Z",
+		"duration": 30,
+		"start": "2015-11-28T13:30:00Z",
+		"program": {
+			"id": 113977,
+			"uri": "/cs/v3/programs/113977"
+		},
+		"effectiveStart": "2015-11-28T13:30:00Z",
+		"retentionExpiryDate": "2015-12-03T13:30:00Z"
+	}]
+}

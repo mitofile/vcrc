@@ -1,0 +1,29 @@
+{
+    "entities": [
+        {
+            "id": "5",
+            "type": "event",
+            "status": {
+                "state": "deleted"
+            },
+            "start": "2015-03-11T03:00:00Z",
+            "end": "2015-03-11T04:00:00Z",
+            "eventStart": "2015-03-11T03:00:00Z",
+            "eventEnd": "2015-03-11T04:00:00Z",
+            "createdOn": "2015-03-11T04:00:00Z",
+            "lastModified": "2015-03-11T09:00:00Z",
+            "user": "family",
+            "airingId": "SH001103230000_14789_2015-05-29T18:00:00.000Z",
+            "programId": "SH001103230000",
+            "channelId": " 42642",
+            "title": "Deleted Asset",
+            "program": "/programs/98765",
+            "size": 411,
+            "options": {
+                "recordPriority": "RECORD_WHEN_QUOTA_ALLOWED",
+                "spaceConflictPolicy": "UNTIL_SPACE_NEEDED"
+            },
+            "expireDate": "2016-03-11T03:00:00Z"
+        }
+    ]
+}

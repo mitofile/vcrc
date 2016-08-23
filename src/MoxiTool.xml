@@ -1,0 +1,597 @@
+<!--
+Development Tools
+
+Historical Version:   
+V1.0 - Diego Iacono
+escape special characters
+
+<	&lt;
+>	&gt;
+"	&quot;
+&	&amp;
+'	&apos;
+					 
+-->
+<project name="MoxiTool">
+	<description>Developer Magics Tools</description>
+
+	<loadproperties srcFile="ndvrTool.properties"/>
+
+	<property name="currentMockfiles" value="${glassFlishDir}/vcrc/WEB-INF/classes/com/arris/dataMock"/>
+	<property name="currentPosterfiles" value="${glassFlishDir}/vcrc/WEB-INF/classes"/>
+	<property name="docRoot" value="${glassFlishDir}/domains/domain1/docroot"/>
+	<path id="lib.path">
+		<fileset dir="${glassFlishDir}/vcrc/WEB-INF/lib" includes="**/*.jar"/>
+	</path>
+	<taskdef name="ndvr" classname="${taskNdrClass}"  classpathref="lib.path" classpath="${buildPath}"/>
+	<taskdef name="cisEPG" classname="${taskSOAPClass}" classpathref="lib.path" classpath="${buildPath}"/>
+	<taskdef name="downloadTrailers" classname="${taskDownloadTrailers}" classpathref="lib.path" classpath="${buildPath}"/>
+	<taskdef name="downloadPosters" classname="${taskDownloadPosters}" classpathref="lib.path" classpath="${buildPath}"/>
+
+	<!-- PUBLIC TASK DEFINITIONS START-->
+	<target name="0)TEST - UI - Schedule Serie" description="Deploy specified component">
+		<property name="name" value="value"/>
+		<loadresource property="recordingsMock">
+			<file file="${currentMockfiles}/personalSchedule.json"/>
+		</loadresource>
+		<loadresource property="serieMock">
+			<file file="${currentMockfiles}/itemSerieMock.json"/>
+		</loadresource>
+		<loadresource property="posterBdFile">
+			<file file="${currentPosterfiles}/LocalPosterBD.json"/>
+		</loadresource>
+		<addJsonElement text="${recordingsMock}" text2="3" text3="${posterBdFile}" text4="${serieMock}" text5="serie,RECEIVED" property="moreRecordingsMock"/>
+		<echo file="${currentMockfiles}/personalSchedule.json" append="false">
+			   ${moreRecordingsMock}
+			</echo>
+	</target>
+	<target name="0)TEST - UI - Schedules Program" description="Deploy specified component">
+		<property name="name" value="value"/>
+		<loadresource property="recordingsMock">
+			<file file="${currentMockfiles}/personalSchedule.json"/>
+		</loadresource>
+		<loadresource property="scheduleMock">
+			<file file="${currentMockfiles}/itemScheduleMock.json"/>
+		</loadresource>
+		<loadresource property="posterBdFile">
+			<file file="${currentPosterfiles}/LocalPosterBD.json"/>
+		</loadresource>
+		<addJsonElement text="${recordingsMock}" text2="5" text3="${posterBdFile}" text4="${scheduleMock}" text5="schedule" property="moreRecordingsMock"/>
+		<echo file="${currentMockfiles}/personalSchedule.json" append="false">
+			   ${moreRecordingsMock}
+		</echo>
+	</target>
+	<target name="0)TEST - UI - Recordings Program" description="Deploy specified component">
+		<loadresource property="recordingsMock">
+			<file file="${currentMockfiles}/personalRecordings.json"/>
+		</loadresource>
+		<loadresource property="itemRecordingMock">
+			<file file="${currentMockfiles}/itemRecordingMock.json"/>
+		</loadresource>
+		<loadresource property="posterBdFile">
+			<file file="${currentPosterfiles}/LocalPosterBD.json"/>
+		</loadresource>
+		<addJsonElement text="${recordingsMock}" text2="5" text3="${posterBdFile}" text4="${itemRecordingMock}" text5="recording" property="moreRecordingsMock"/>
+		<echo file="${currentMockfiles}/personalRecordings.json" append="false">
+		   ${moreRecordingsMock}
+		</echo>
+	</target>
+	<target name="0)TEST - UI - Recordings Series" description="Deploy specified component">
+		<loadresource property="recordingsMock">
+			<file file="${currentMockfiles}/personalRecordings.json"/>
+		</loadresource>
+		<loadresource property="itemRecordingMock">
+			<file file="${currentMockfiles}/itemSerieRecordMock.json"/>
+		</loadresource>
+		<loadresource property="posterBdFile">
+			<file file="${currentPosterfiles}/LocalPosterBD.json"/>
+		</loadresource>
+		<addJsonElement text="${recordingsMock}" text2="3" text3="${posterBdFile}" text4="${itemRecordingMock}" text5="serie,CAPTURING" property="moreRecordingsMock"/>
+		<echo file="${currentMockfiles}/personalRecordings.json" append="false">
+			   ${moreRecordingsMock}
+			</echo>
+	</target>
+	<target name="0)TEST - UI - Catchup" description="Deploy specified component">
+		<loadresource property="catchupMock">
+			<file file="${currentMockfiles}/catchupTvRecordings.json"/>
+		</loadresource>
+		<loadresource property="itemRecordingMock">
+			<file file="${currentMockfiles}/itemRecordingMock.json"/>
+		</loadresource>
+		<loadresource property="posterBdFile">
+			<file file="${currentPosterfiles}/LocalPosterBD.json"/>
+		</loadresource>
+		<addJsonElement text="${catchupMock}" text2="5" text3="${posterBdFile}" text4="${itemRecordingMock}" text5="recording" property="moreCatchupMock"/>
+		<echo file="${currentMockfiles}/catchupTvRecordings.json" append="false">
+		   ${moreCatchupMock}
+		</echo>
+	</target>
+
+	<target name="A-)!Delete! MOXI SchedulesRecorings" description="Run a linux command provided by user">
+		<ndvr method="GET" url="http://${mediaGatewayIP}/mws/1/sources/dvr/tasks/?filter_text=&amp;filter_servertranslated=1" fileName="${moxiTargetIds}" moxiSchedule="true"/>
+		<loadresource property="listIdsMoxi">
+			<file file="${moxiTargetIds}"/>
+		</loadresource>
+		<deleteMoxiItems text="${listIdsMoxi}"/>
+		<ndvr method="GET" url="http://${mediaGatewayIP}/mws/1/GET/sources/dvr/recordings/?filter_text=&amp;filter_servertranslated=1" fileName="${moxiTargetIds}" moxiSchedule="true"/>
+		<loadresource property="listIdsMoxi">
+			<file file="${moxiTargetIds}"/>
+		</loadresource>
+		<deleteMoxiItems text="${listIdsMoxi}"/>
+		<ndvr method="GET" url="http://${mediaGatewayIP}/mws/1/GET/sources/dvr/recordings/?filter_text=&amp;filter_servertranslated=1" fileName="${moxiTargetIds}" moxiSchedule="true"/>
+		<loadresource property="listIdsMoxi">
+			<file file="${moxiTargetIds}"/>
+		</loadresource>
+		<deleteMoxiItems text="${listIdsMoxi}"/>
+	</target>
+
+	<target name="B- MediaGateWay Show Log" description="Show the content of specified log file from the list">
+		<input message="Select the LogFile to be Shown:" addproperty="file.log"/>
+		<scp file="${mgUser}:${mgPass}@${mediaGatewayIP}:/var/log/local/${file.log}" trust="true" todir="${projectPathHome}"/>
+		<loadfile property="FileLog" srcFile="${projectPathHome}\${file.log}" failonerror="false"/>
+		<echo>${FileLog}</echo>
+	</target>
+
+	<target name="B- MediaGateWay Tail Log" description="Tail to log file">
+		<input message="Select the LogFile to be Shown:" addproperty="file.log"/>
+		<sshexec host="${mediaGatewayIP}" username="${mgUser}" password="${mgPass}" trust="true" verbose="true" command="tail -f /var/log/local/linux_0 | egrep 'method'" />
+	</target>
+
+	<target name="B- MediaGateWay cat Log" description="Tail to log file">
+		<input message="Select the LogFile to be Shown:" addproperty="file.log"/>
+		<sshexec host="${mediaGatewayIP}" username="${mgUser}" password="${mgPass}" trust="true" verbose="true" command="egrep -w 'method:Curling|method:nDvrScheduling' /var/log/local/linux_0" />
+	</target>
+
+	<target name="C-Lisle Stop Server" description="shh tools">
+		<sshexec host="10.26.68.111" username="root" password="denver" trust="true" verbose="true" command="cd /opt/glassfish4/glassfish/bin;./stopserv domain2" />
+	</target>
+	<target name="C-Lisle Start Server" description="shh tools">
+		<sshexec host="10.26.68.111" username="root" password="denver" trust="true" verbose="true" command="cd /opt/glassfish4/glassfish/bin;./startserv domain2" />
+	</target>
+	<target name="Z- Tail log File" description="shh tools">
+		<sshexec host="10.26.68.111" username="root" password="denver" trust="true" verbose="true" command="tail -f /opt/glassfish3/glassfish/domains/domain1/applications/vcrc/WEB-INF/logs/ndvrMoxi.log" />
+	</target>
+	<target name="Z- Tail GLASSFISH log File" description="shh tools">
+		<sshexec host="10.26.68.111" username="root" password="denver" trust="true" verbose="true" command="tail -f /opt/glassfish3/glassfish/domains/domain1/logs/server.log" />
+	</target>
+	<target name="Z- CAT log File" description="shh tools">
+		<sshexec host="10.26.68.111" username="root" password="denver" trust="true" verbose="true" command="cat /opt/glassfish3/glassfish/domains/domain1/applications/vcrc/WEB-INF/logs/ndvrMoxi.log" />
+	</target>
+	<target name="Z- Clear log File" description="shh tools">
+		<sshexec host="10.26.68.111" username="root" password="denver" trust="true" verbose="true" command="cd /opt/glassfish3/glassfish/domains/domain1/applications/vcrc/WEB-INF/logs;  echo > ndvrMoxi.log" />
+	</target>
+	<target name="Tool_1 - Copy Mocks To remote Server" description="description">
+		<property name="localMockDir" value="C:/MainFolder/glassfish4/glassfish/domains/domain1/eclipseApps/vcrc/WEB-INF/classes/com/arris/dataMock"/>
+		<property name="serverDirDest" value="/opt/glassfish3/glassfish/domains/domain1/applications/vcrc/WEB-INF/classes/com/arris/dataMock"/>
+		<scp todir="root:denver@10.26.68.111:${serverDirDest}" trust="true">
+			<fileset dir="${localMockDir}">
+				<include name="*.json" />
+			</fileset>
+		</scp>
+	</target>
+
+
+	<target name="D- Download Subscriber Posters" description="description">
+		<input message="Please enter the Subscriber Name:" addproperty="subName"/>
+		<downloadPosters subscriber="${subName}" cachePath="${poster.folder}/posterImages" projectPath="${glassFlishDir}/vcrc/posterImage" forceCatchup="false" forceSubcriber ="true"  testDownload="false" />
+	</target>
+
+	<target name="D- Download Catchup Posters" description="description">
+		<downloadPosters subscriber="null" cachePath="${poster.folder}/posterImages" projectPath="${glassFlishDir}/vcrc/posterImage" forceCatchup="true" forceSubcriber ="false"  testDownload="false" />
+	</target>
+
+	<target name="D- Download EPG Posters" description="description">
+		<downloadPosters subscriber="${subName}" cachePath="${poster.folder}/posterImages" projectPath="${glassFlishDir}/vcrc/posterImage" forceCatchup="false" forceSubcriber ="false"  testDownload="false" />
+	</target>
+
+	<!-- ================================= 
+          target: Vod_Mock_MetataCreator              
+         ================================= -->
+	<target name="Vod_Mock_MetataCreator" description="description">
+		<input message="Please enter the Vod Name:" addproperty="vodName"/>
+		<escapePageUrl text="${vodName}" property="escapedTitle"/>
+		<get verbose = "true" dest="${projectPathHome}/src/com/arris/dataMock/onDemandMock/vod_Metadata/${vodName}.json" src="http://www.myapifilms.com/imdb?title=${escapedTitle}&amp;format=JSON&amp;aka=0&amp;business=0&amp;seasons=0&amp;seasonYear=0&amp;technical=0&amp;filter=N&amp;exactFilter=0&amp;limit=1&amp;lang=en-us&amp;stars=N&amp;actors=N&amp;biography=0&amp;trailer=1&amp;uniqueName=0&amp;filmography=0&amp;bornDied=0&amp;starSign=0&amp;actorActress=0&amp;actorTrivia=0&amp;movieTrivia=0&amp;awards=0"/>
+		<loadresource property="newMockData">
+			<file file="${projectPathHome}/src/com/arris/dataMock/onDemandMock/vod_Metadata/${vodName}.json"/>
+		</loadresource>
+		<addPrice text="${newMockData}" property="mockdataFile"/>
+		<echo message="${mockdataFile}" file="${projectPathHome}/src/com/arris/dataMock/onDemandMock/vod_Metadata/${vodName}.json"/>
+	</target>
+
+	<!-- ================================= 
+          target: Add rotten tomatoes score              
+         ================================= -->
+
+
+	<target name="D- Download Trailers" description="description">
+		<downloadTrailers dest="${docRoot}" mockSource="${currentMockfiles}" />
+	</target>
+	
+	<target name="E -Add rotten tomatoes score" description="description">
+		<property name="targetDir" value="C:/P4W/diacono_ZAR03-PROJ-233_3100/devicecontent/prototypes/trunk/vcrc/src/com/arris/dataMock/onDemandMock/vod_Metadata"/>
+		<fileset id="list.file" dir="${targetDir}" includes="**"/>
+		<property name="fileList" refid="list.file"/>
+		<replaceCharacter text="${fileList}" property="inputList"/>
+		<input message="Select a file" validargs="${inputList}" addproperty="fileSelected" />
+		<loadresource property="mockInfo">
+			<file file="${targetDir}/${fileSelected}"/>
+		</loadresource>
+		<addRottenTomatoes text="${mockInfo}" text2="${targetDir}" text3="${fileSelected}"/>
+	</target>
+
+	<!--<target name="P1- MediaGateWay Tail Log" description="Tail to log file">
+			<input message="Select the LogFile to be Shown:" addproperty="file.log"/>
+			<sshexec host="${mediaGatewayIP}" username="${mgUser}" password="${mgPass}" trust="true" verbose="true" command="ssh user@ cd /var/log/local ; tail -f ${file.log}" />
+		</target>-->
+
+	<!-- Scripts Private Tasks resources-->
+
+	<target name="Sync_Ndvr_Moxi" description="Run a linux command provided by user">
+		<getConfigPath text="${basedir}" text2="${ant.project.name}" property="projectPath"/>
+		<loadfile property="configJson" srcFile="${projectPath}/getRecordingRequest.json" failonerror="false"/>
+		<echo>${configJson}</echo>
+		<getSubscriber text="${configJson}" property="subscriberConfig"  />
+		<ndvr method="DELETE" url="http://${ndvr_ip}:${ndvr_port}/cs/services/v1/resource/scheduleevent?subscriber=${subscriberConfig}"/>
+		<ndvr method="GET" url="http://${mediaGatewayIP}/mws/1/sources/dvr/tasks/?filter_text=&amp;filter_servertranslated=1" fileName="${moxiTargetIds}" moxiSchedule="true"/>
+		<loadresource property="listIdsMoxi">
+			<file file="${moxiTargetIds}"/>
+		</loadresource>
+		<deleteMoxiItems text="${listIdsMoxi}"/>
+		<ndvr method="GET" url="http://${mediaGatewayIP}/mws/1/GET/sources/dvr/recordings/?filter_text=&amp;filter_servertranslated=1" fileName="${moxiTargetIds}" moxiSchedule="true"/>
+		<loadresource property="listIdsMoxi">
+			<file file="${moxiTargetIds}"/>
+		</loadresource>
+		<deleteMoxiItems text="${listIdsMoxi}"/>
+		<sleep milliseconds="5000"/>
+		<sleep milliseconds="5000"/>
+		<ndvr method="GET" url="http://${mediaGatewayIP}/mws/1/GET/sources/dvr/recordings/?filter_text=&amp;filter_servertranslated=1" fileName="${moxiTargetIds}" moxiSchedule="true"/>
+		<loadresource property="listIdsMoxi">
+			<file file="${moxiTargetIds}"/>
+		</loadresource>
+		<deleteMoxiItems text="${listIdsMoxi}"/>
+	</target>
+
+	<target name="deleteOnMoxi">
+		<ndvr method="DELETE" url="http://${mediaGatewayIP}/mws/1/DELETE/content/mws_dvr_task_id=${taskId};mws_dvr_recording_id=${recordId}"/>
+	</target>
+
+
+	<target name="waitMs">
+		<sleep milliseconds="1000"/>
+	</target>
+
+	<!-- Scripts resources-->
+
+	<scriptdef name="getDay" language="javascript">
+		<attribute name="text" />
+		<attribute name="property" />
+		<![CDATA[
+		   var text = attributes.get("text");
+		   var d = new Date();
+		   month = '' + (d.getMonth() + 1);
+		   day = '' + d.getDate();
+		   if(text){
+		     day = parseInt(day) + parseInt(text);
+		     day = day + "";
+		   }
+		   year = d.getFullYear();
+    	   if (month.length < 2) month = '0' + month;
+		   if (day.length < 2) day = '0' + day;
+           var result = [year, month, day].join('-');
+		   project.setProperty(attributes.get("property"), result);
+		]]>
+	</scriptdef>
+
+	<scriptdef name="callTaskCommand" language="javascript">
+		<attribute name="text" />
+		<attribute name="property" />
+		<![CDATA[
+		 var text = attributes.get("text");
+	   	 var list = text.split("\n");
+	   	 var i=0;
+	   	 for(i=0; i<list.length; i++)
+	   	 {   
+	   	      project.setProperty(attributes.get("property"), list[i]);
+	   	      echo = project.createTask("echo");
+	    	  echo.setMessage("Channel Id: " + list[i]);
+	    	  echo.perform()
+	   	      project.executeTarget("SendPackageEntry script");
+	   	      echo = project.createTask("echo"); 
+	    	  echo.setMessage("Package Channel Entry done for channel: " + list[i]);
+	    	  echo.perform();  
+		      project.executeTarget("waitMs");  
+	   	    
+	   	 }
+	  ]]>
+	</scriptdef>
+
+	<scriptdef name="getConfigPath" language="javascript">
+		<attribute name="text" />
+		<attribute name="text2" />
+		<attribute name="property" />
+
+		<![CDATA[
+		 var text = attributes.get("text");
+		 var scrFlag = true;
+		 var projectName =  attributes.get("text2");
+		 projectName = projectName.trim();
+		 if(text.indexOf("classes")>0){
+		   scrFlag = false;
+		 }
+		 if(scrFlag){
+		   resultPath = text.substring(0, text.indexOf(projectName) + projectName.length() + 1) + "WebContent/config";
+		 }else{
+		   resultPath = text.substring(0, text.indexOf(projectName) + projectName.length() + 1) + "config";
+		 }
+	     project.setProperty(attributes.get("property"), resultPath);
+	  ]]>
+	</scriptdef>
+
+	<scriptdef name="getSubscriber" language="javascript">
+		<attribute name="text" />
+		<attribute name="property" />
+
+		<![CDATA[
+		 var text = attributes.get("text");
+		 var list = text.split("\"subscriber\":");
+		 var Tokens = list[1].split("\"");
+		 var subscriber= Tokens[1].trim();
+	     project.setProperty(attributes.get("property"), subscriber);
+	  ]]>
+	</scriptdef>
+
+	<scriptdef name="doPackageEntry" language="javascript">
+		<attribute name="text" />
+		<attribute name="text2" />
+		<![CDATA[
+		 var text = attributes.get("text");
+		 var pId =  attributes.get("text2");
+	   	 var list = text.split(",");
+	   	 var i=0;
+	   	 for(i=0; i<list.length; i++)
+	   	 {   
+           echo = project.createTask("echo");
+  	       echo.setMessage("Creating Package Entry for channelId " + list[i]);
+  	       echo.perform();
+		   project.setProperty("entryName", pId);
+		   project.setProperty("channelName", list[i]);	   
+	       project.executeTarget("SendPackageEntry script");
+	       project.executeTarget("waitMs");
+	   	 }
+	  ]]>
+	</scriptdef>
+
+	<scriptdef name="getTime" language="javascript">
+		<attribute name="text" />
+		<attribute name="property" />
+		<![CDATA[
+			 var text = attributes.get("text");
+		   	 var list = text.split("_");
+		     project.setProperty(attributes.get("property"), list[2]);
+		  ]]>
+	</scriptdef>
+
+	<scriptdef name="startRecordings" language="javascript">
+		<attribute name="text" />
+		<![CDATA[
+				 var text = attributes.get("text");
+		         var ids = text.split(",");
+				 var i = 0;
+			   	 for(i;i<ids.length;i++){
+		              echo = project.createTask("echo");
+			    	  echo.setMessage("Sending Start for Recording Id: " + ids[i]);
+			    	  echo.perform();
+		              project.setProperty("idRecording", ids[i]);
+				      project.executeTarget("StartRecording");
+				      project.executeTarget("waitMs");  
+		         }
+				
+			  ]]>
+	</scriptdef>
+
+	<scriptdef name="escapePageUrl" language="javascript">
+		<attribute name="text" />
+		<attribute name="property" />
+		<![CDATA[
+		           var text = attributes.get("text");
+	   	           var result = escape(text);
+	               project.setProperty(attributes.get("property"), result);
+			  ]]>
+	</scriptdef>
+
+	<scriptdef name="addJsonElement" language="javascript">
+		<attribute name="text" />
+		<attribute name="text2" />
+		<attribute name="text3" />
+		<attribute name="text4" />
+		<attribute name="text5" />
+		<attribute name="property" />
+		<![CDATA[
+   			           var text = attributes.get("text");
+					   var text2 = attributes.get("text2");
+		               var text3 = attributes.get("text3");
+		               var text4 = attributes.get("text4");
+		               var text5 = attributes.get("text5");
+		               var isArray = text5.split(",");
+		               var seriesStatus = undefined;
+		               if(isArray.constructor === Array){
+		                 text5 = isArray[0];
+		                 seriesStatus = isArray[1];
+		               }
+			           var posterBd = JSON.stringify(eval('('+text3+')'));
+		               var jsonPoster = JSON.parse(posterBd);
+		               var count = parseInt(text2);
+					   var jsonStr = JSON.stringify(eval('('+text+')'));
+		               var jsonObj = JSON.parse(jsonStr);
+		               var item = undefined;
+		               var flagSerie = false;
+					    	 
+		               var itemObjIndex = jsonObj.entities[jsonObj.entities.length-1];
+		               var itemObj = undefined;
+		               if(itemObjIndex){
+	                      itemObj = JSON.parse(JSON.stringify(itemObjIndex)); 	
+		               }
+		               if(text5.indexOf("serie")==0){
+		                  flagSerie = true; 
+		               }
+		
+                       if(flagSerie){
+		                 text4 = text4.replace("empty",seriesStatus)
+		               }
+				
+		               var jsonSerieStr = JSON.stringify(eval('('+text4+')'));
+					   item = JSON.parse(jsonSerieStr);
+
+				       var index = 0;
+		               var i = 0;
+		               var posterSerie = undefined;
+		               var idSerieIndex =0;
+
+					   for(i=0;i<count;i++){
+		                  var newItem = JSON.parse(JSON.stringify(item));
+		                  if(itemObj){
+		                      index = parseInt(itemObj.scheduleEvent.id);
+		                  }else{
+		                     if((isArray.constructor === Array && seriesStatus=="RECEIVED") ||  item.status=="RECEIVED"){
+		                           index = 7000
+		                     }else{
+		                         index = 9000
+		                      }
+		                     
+		                   }
+
+		                  index = index + i + 1;
+		                  newItem.scheduleEvent.id = index;
+		                  newItem.id = index;
+		                  var posterId = parseInt(jsonObj.entities.length);		
+		                  while(posterId>55){
+		                      posterId = posterId - 55;
+		                  }
+		                  if(flagSerie){
+		                    if(!posterSerie){
+		                       posterSerie = jsonPoster.posters[posterId];
+		                       idSerieIndex = Math.floor( Math.random() * ( 1 + 5000 - 1000 ) ) + 1000;
+		                    }
+
+		                   newItem.scheduleEvent.seriesId = idSerieIndex;
+		                   newItem.scheduleEvent.programId = posterSerie;
+				           newItem.recording.program.programId = posterSerie;
+
+		                  }else{
+		                     newItem.scheduleEvent.programId=jsonPoster.posters[posterId];
+		                     newItem.recording.program.programId=jsonPoster.posters[posterId];
+		                  }
+		                  newItem.playbackUrl="http://www.html5videoplayer.net/videos/madagascar3.mp4";
+		                  newItem.recording.program.originalTitle = "Mock_" + newItem.id;
+		                  jsonObj['entities'].push(newItem);
+		               }
+		               project.setProperty(attributes.get("property"), JSON.stringify(jsonObj));
+				  ]]>
+	</scriptdef>
+
+	<scriptdef name="deleteMoxiItems" language="javascript">
+		<attribute name="text" />
+		<![CDATA[
+					 var text = attributes.get("text");
+		             if(text.indexOf("{")>0){
+                        echo = project.createTask("echo");
+                        echo.setMessage("Empty Target Ids");
+                        echo.perform();
+					 }else{
+                        var ids = text.split(",");
+		                var i = 0;
+	   	                for(i;i<ids.length;i++){
+                          var total = parseInt(ids.length) - i;
+                          echo = project.createTask("echo");
+                          echo.setMessage("Target Items to Delete: " + total);
+                          echo.perform();
+			              var tokens = ids[i].split('_');
+			              var mws_dvr_task_id = tokens[0];
+			              var mws_dvr_recording_id = tokens[1];
+                          var tms_showing_begin = tokens[2];
+	    	              echo.setMessage("Sending Delete for mws_dvr_task_id=" + mws_dvr_task_id + ", mws_dvr_recording_id=" + mws_dvr_recording_id);
+	    	              echo.perform();
+						  
+                          project.setProperty("taskId", parseInt(mws_dvr_task_id));
+                          project.setProperty("recordId", parseInt(mws_dvr_recording_id));
+		                  project.executeTarget("deleteOnMoxi");
+		                  project.executeTarget("waitMs");  
+                         }
+		             }
+				  ]]>
+		</scriptdef>
+
+		<scriptdef name="addPrice" language="javascript">
+			<attribute name="text" />
+			<attribute name="property" />
+			<![CDATA[
+	    	           var priceInt = Math.floor((Math.random() * 10) + 1);
+	    	           var priceDobule = Math.floor((Math.random() * 99) + 1);
+	    	           var price = "$"+ priceInt + "." + (priceDobule<10?"0"+priceDobule:priceDobule);
+	    	           var text = attributes.get("text");
+		   	           text = text.substring(1,text.length()-1);
+	    	           var result = JSON.parse(text);
+	    	           result.price = price;
+	    	           echo = project.createTask("echo");
+	    	          
+	    	          echo.setMessage("rated: " + result.rated);
+	    		      echo.perform();
+	    	          if(!result.rated.length>0){
+                         echo.setMessage("rated was empty");
+	    	             echo.perform();
+	    	             result.reated = "PG-13";
+	    	           }
+	    	           echo.setMessage("runtime: " + result.runtime);
+	    		       echo.perform();
+	    	           if(!result.runtime.toString().length>0){
+	    	             echo.setMessage("duration was empty");
+	    		    	 echo.perform();
+	    	             result.runtime = ["94 min"];
+	    	           }
+	    	           if(result.trailer.qualities && !result.trailer.qualities.length>0 && !result.trailer.qualities.toString().length>0){
+	    	              echo.setMessage("TRAILER NOT FOUND!....");
+	    		    	  echo.perform();
+	    	           }else{
+	    	                echo.setMessage("TRAILER FOUND ....");
+	    		    		echo.perform();
+	    	           }
+		               project.setProperty(attributes.get("property"), JSON.stringify(result));
+				  ]]>
+		</scriptdef>
+
+		<scriptdef name="addRottenTomatoes" language="javascript">
+			<attribute name="text" />
+			<attribute name="text2" />
+			<attribute name="text3" />
+			<attribute name="property" />
+			<![CDATA[
+	    	              importClass(java.io.File);
+	    	               echo = project.createTask("echo");
+             	           var text = attributes.get("text"); 
+                           var text2 = attributes.get("text2");
+	    	                var text3 = attributes.get("text3");
+	    	                  var file = new File(text2 + "/" + text3)
+                              var rating= Math.floor((Math.random() * 99) + 19);
+                              var rottenRating = (rating<10?"0"+rating:rating) + "%";
+	    	                  var jsonFile = JSON.parse(text);
+	    	                  jsonFile.rottenTomatoesRating = rottenRating;
+                              echo.setMessage("File Name: " + text3 + " ->" + " rating: " + rottenRating);
+                              echo.perform();
+	    	                  echo.setMessage(JSON.stringify(jsonFile));
+	    	                  echo.setFile(file);
+	    	                  echo.perform();
+					  ]]>
+			</scriptdef>
+
+		<scriptdef name="replaceCharacter" language="javascript">
+			<attribute name="text" />
+			<attribute name="property" />
+			<![CDATA[
+					 var text = attributes.get("text");
+	        	     text = text.replace(";", ",")
+	        	     project.setProperty(attributes.get("property"), text);
+					
+				  ]]>
+		</scriptdef>
+
+	</project>

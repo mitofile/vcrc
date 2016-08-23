@@ -1,0 +1,90 @@
+{
+	"responseHeader": {
+		"Date": [
+			["Wed, 06 Jan 2016 14:10:17 GMT"]
+		],
+		"Transfer-Encoding": [
+			["chunked"]
+		],
+		"Content-Type": [
+			["application/json;charset=UTF-8"]
+		],
+		"Connection": [
+			["keep-alive"]
+		],
+		"Server": [
+			["nginx/1.8.0"]
+		],
+		"null": [
+			["HTTP/1.1 200 OK"]
+		]
+	},
+	"entities": [{
+		"id": "3122",
+		"createdOn": "2015-11-26T18:11:10Z",
+		"scope": "PUBLIC",
+		"recordings": "/cs/v3/recordingsets/3122/recordings",
+		"status": "ACTIVE",
+		"name": "HBO",
+		"channels": ["3122"],
+		"type": "CHANNEL_RECORDING_SET",
+		"options": {
+			"copyType": "UNIQUE_COPY",
+			"retentionHours": 5
+		},
+		"metadata": {}
+	}, {
+		"id": "69687",
+		"createdOn": "2015-11-26T18:20:54Z",
+		"scope": "PUBLIC",
+		"recordings": "/cs/v3/recordingsets/69687/recordings",
+		"status": "ACTIVE",
+		"name": "Nickelodeon",
+		"channels": ["69687"],
+		"type": "CHANNEL_RECORDING_SET",
+		"options": {
+			"copyType": "UNIQUE_COPY",
+			"retentionHours": 40
+		},
+		"metadata": {}
+	}, {
+		"id": "b8ec8524cdde401007f8b50a8a9b6881",
+		"createdOn": "2015-12-02T13:42:53Z",
+		"scope": "PUBLIC",
+		"recordings": "/cs/v3/recordingsets/b8ec8524cdde401007f8b50a8a9b6881/recordings",
+		"status": "ACTIVE",
+		"name": "Las Vegas",
+		"channels": ["fa5a1b6b1786aaace3cf60275cea9399"],
+		"type": "CHANNEL_RECORDING_SET",
+		"options": {
+			"retentionHours": 40
+		},
+		"metadata": {}
+	}, {
+		"id": "417aef57b53274f0203e4ccfd83701a6",
+		"createdOn": "2015-12-02T13:43:18Z",
+		"scope": "PUBLIC",
+		"recordings": "/cs/v3/recordingsets/417aef57b53274f0203e4ccfd83701a6/recordings",
+		"status": "ACTIVE",
+		"name": "Discovery",
+		"channels": ["9287f0fe11ca050cd59b269e3cae9944"],
+		"type": "CHANNEL_RECORDING_SET",
+		"options": {
+			"retentionHours": 40
+		},
+		"metadata": {}
+	}, {
+		"id": "076f26ba8ee21ac8c914221296c8a981",
+		"createdOn": "2015-12-02T13:49:49Z",
+		"scope": "PUBLIC",
+		"recordings": "/cs/v3/recordingsets/076f26ba8ee21ac8c914221296c8a981/recordings",
+		"status": "ACTIVE",
+		"name": "History",
+		"channels": ["2871012c648668b022ead9b82105b146"],
+		"type": "CHANNEL_RECORDING_SET",
+		"options": {
+			"retentionHours": 40
+		},
+		"metadata": {}
+	}]
+}

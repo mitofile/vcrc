@@ -1,0 +1,542 @@
+{
+		id: 4000,
+		type: "recordingreference",
+		status: "RECEIVED",
+		scheduleEvent: {
+			id: 4000,
+			type: "programscheduleevent",
+			status: "RECEIVED",
+			channelId: "tnt hd logo",
+			scheduledStart: "2014-07-24T18:00:00.000Z",
+			scheduledEnd: "2014-07-24T19:00:00.000Z",
+			creationTime: "2014-07-23T15:50:48.032Z",
+			copyType: "SHARED_COPY",
+			recordPriority: "RECORD_WHEN_QUOTA_ALLOWED",
+			recorderType: "LOCAL",
+			subscriber: "Arris",
+			subscriberUser: null,
+			recordingReferences: {
+				id: null,
+				uri: "/cs/services/v1/resource/recordingreference?scheduleEvent.id=3061"
+			},
+			scheduleEventAlias: "programscheduleevent",
+			dueDate: "2015-01-19T15:50:48.032Z",
+			airingId: "EP227413_46710_2014-07-24T18:00:00Z",
+			programId: "TheBurbs_boxart.jpg",
+			programStartTime: "2014-07-24T18:00:00.000Z"
+		},
+		recording: {
+			id: 4000,
+			type: "recording",
+			status: "RECEIVED",
+			recordingStart: "2014-07-24T18:00:00.000Z",
+			recordingEnd: "2014-07-24T19:00:00.000Z",
+			uniqueId: "CLOUD_SCHEDULER_2826353d-69ae-4825-8c14-d7ec2da09981",
+			copyType: "SHARED_COPY",
+			program: {
+				id: 4000,
+				type: "program",
+				recordable: null,
+				retentionDays: null,
+				airingId: "EP227413_46710_2014-07-24T18:00:00Z",
+				programId: "TheBurbs_boxart.jpg",
+				channel: "tnt hd logo",
+				originalTitle: "The Good Wife",
+				startTime: "2014-07-24T18:00:00.000Z",
+				duration: 60,
+				description: "Program metadata",
+				seriesId: "185469",
+				episodeNumber: "5",
+				metadata: [{
+					id: 3042,
+					type: "programmetadata",
+					name: "is_recordable",
+					value: "true"
+				},
+				{
+					id: 3042,
+					type: "programmetadata",
+					name: "tv_rating",
+					value: "4"
+				},
+				{
+					id: 3042,
+					type: "programmetadata",
+					name: "description",
+					value: "Mock description: This is a description, that we use to place some phrases into the corresponding section"
+				},
+				{
+					id: 3042,
+					type: "programmetadata",
+					name: "Executive Producer",
+					value: "Mock, executive producer 1"
+				},
+				{
+					id: 3042,
+					type: "programmetadata",
+					name: "Executive Producer",
+					value: "Mock, executive producer 2"
+				},
+				{
+					id: 3042,
+					type: "programmetadata",
+					name: "Host",
+					value: "Mock Actor1, Mock Actor 2"
+				},
+				{
+					id: 3042,
+					type: "programmetadata",
+					name: "year",
+					value: "1992"
+				},
+				{
+					id: 3042,
+					type: "programmetadata",
+					name: "is_recordable",
+					value: "true"
+				},
+				{
+					id: 3042,
+					type: "programmetadata",
+					name: "is_recordable",
+					value: "true"
+				},
+				{
+					id: 3042,
+					type: "programmetadata",
+					name: "is_recordable",
+					value: "true"
+				},
+				{
+					id: 3043,
+					type: "programmetadata",
+					name: "copy_type",
+					value: "shared"
+				},
+				{
+					id: 3043,
+					type: "programmetadata",
+					name: "copy_type",
+					value: "shared"
+				},
+				{
+					id: 3043,
+					type: "programmetadata",
+					name: "copy_type",
+					value: "shared"
+				},
+				{
+					id: 3043,
+					type: "programmetadata",
+					name: "copy_type",
+					value: "shared"
+				},
+				{
+					id: 3044,
+					type: "programmetadata",
+					name: "definition",
+					value: "HD"
+				},
+				{
+					id: 3044,
+					type: "programmetadata",
+					name: "definition",
+					value: "HD"
+				},
+				{
+					id: 3044,
+					type: "programmetadata",
+					name: "definition",
+					value: "HD"
+				},
+				{
+					id: 3044,
+					type: "programmetadata",
+					name: "definition",
+					value: "HD"
+				},
+				{
+					id: 3045,
+					type: "programmetadata",
+					name: "airing_id",
+					value: "EP227413_46710_2014-07-24T18:00:00Z"
+				},
+				{
+					id: 3045,
+					type: "programmetadata",
+					name: "airing_id",
+					value: "EP227413_46710_2014-07-24T18:00:00Z"
+				},
+				{
+					id: 3045,
+					type: "programmetadata",
+					name: "airing_id",
+					value: "EP227413_46710_2014-07-24T18:00:00Z"
+				},
+				{
+					id: 3045,
+					type: "programmetadata",
+					name: "airing_id",
+					value: "EP227413_46710_2014-07-24T18:00:00Z"
+				},
+				{
+					id: 3046,
+					type: "programmetadata",
+					name: "episode_number",
+					value: "5"
+				},
+				{
+					id: 3046,
+					type: "programmetadata",
+					name: "episode_number",
+					value: "5"
+				},
+				{
+					id: 3046,
+					type: "programmetadata",
+					name: "episode_number",
+					value: "5"
+				},
+				{
+					id: 3046,
+					type: "programmetadata",
+					name: "episode_number",
+					value: "5"
+				},
+				{
+					id: 3047,
+					type: "programmetadata",
+					name: "series_title",
+					value: "185469"
+				},
+				{
+					id: 3047,
+					type: "programmetadata",
+					name: "series_title",
+					value: "185469"
+				},
+				{
+					id: 3047,
+					type: "programmetadata",
+					name: "series_title",
+					value: "185469"
+				},
+				{
+					id: 3047,
+					type: "programmetadata",
+					name: "series_title",
+					value: "185469"
+				},
+				{
+					id: 3048,
+					type: "programmetadata",
+					name: "channel_id",
+					value: "46710"
+				},
+				{
+					id: 3048,
+					type: "programmetadata",
+					name: "channel_id",
+					value: "46710"
+				},
+				{
+					id: 3048,
+					type: "programmetadata",
+					name: "channel_id",
+					value: "46710"
+				},
+				{
+					id: 3048,
+					type: "programmetadata",
+					name: "channel_id",
+					value: "46710"
+				},
+				{
+					id: 3049,
+					type: "programmetadata",
+					name: "series_id",
+					value: "185469"
+				},
+				{
+					id: 3049,
+					type: "programmetadata",
+					name: "series_id",
+					value: "185469"
+				},
+				{
+					id: 3049,
+					type: "programmetadata",
+					name: "series_id",
+					value: "185469"
+				},
+				{
+					id: 3049,
+					type: "programmetadata",
+					name: "series_id",
+					value: "185469"
+				},
+				{
+					id: 3050,
+					type: "programmetadata",
+					name: "title",
+					value: "The Good Wife"
+				},
+				{
+					id: 3050,
+					type: "programmetadata",
+					name: "title",
+					value: "The Good Wife"
+				},
+				{
+					id: 3050,
+					type: "programmetadata",
+					name: "title",
+					value: "The Good Wife"
+				},
+				{
+					id: 3050,
+					type: "programmetadata",
+					name: "title",
+					value: "The Good Wife"
+				},
+				{
+					id: 3051,
+					type: "programmetadata",
+					name: "duration",
+					value: "60"
+				},
+				{
+					id: 3051,
+					type: "programmetadata",
+					name: "duration",
+					value: "60"
+				},
+				{
+					id: 3051,
+					type: "programmetadata",
+					name: "duration",
+					value: "60"
+				},
+				{
+					id: 3051,
+					type: "programmetadata",
+					name: "duration",
+					value: "60"
+				},
+				{
+					id: 3052,
+					type: "programmetadata",
+					name: "end_time",
+					value: "2014-07-24T19:00:00.000Z"
+				},
+				{
+					id: 3052,
+					type: "programmetadata",
+					name: "end_time",
+					value: "2014-07-24T19:00:00.000Z"
+				},
+				{
+					id: 3052,
+					type: "programmetadata",
+					name: "end_time",
+					value: "2014-07-24T19:00:00.000Z"
+				},
+				{
+					id: 3052,
+					type: "programmetadata",
+					name: "end_time",
+					value: "2014-07-24T19:00:00.000Z"
+				},
+				{
+					id: 3053,
+					type: "programmetadata",
+					name: "channel_image_id",
+					value: "46710"
+				},
+				{
+					id: 3053,
+					type: "programmetadata",
+					name: "channel_image_id",
+					value: "46710"
+				},
+				{
+					id: 3053,
+					type: "programmetadata",
+					name: "channel_image_id",
+					value: "46710"
+				},
+				{
+					id: 3053,
+					type: "programmetadata",
+					name: "channel_image_id",
+					value: "46710"
+				},
+				{
+					id: 3054,
+					type: "programmetadata",
+					name: "start_time",
+					value: "2014-07-24T18:00:00Z"
+				},
+				{
+					id: 3054,
+					type: "programmetadata",
+					name: "start_time",
+					value: "2014-07-24T18:00:00Z"
+				},
+				{
+					id: 3054,
+					type: "programmetadata",
+					name: "start_time",
+					value: "2014-07-24T18:00:00Z"
+				},
+				{
+					id: 3054,
+					type: "programmetadata",
+					name: "start_time",
+					value: "2014-07-24T18:00:00Z"
+				},
+				{
+					id: 3055,
+					type: "programmetadata",
+					name: "channel_number",
+					value: "227"
+				},
+				{
+					id: 3055,
+					type: "programmetadata",
+					name: "channel_number",
+					value: "227"
+				},
+				{
+					id: 3055,
+					type: "programmetadata",
+					name: "channel_number",
+					value: "227"
+				},
+				{
+					id: 3055,
+					type: "programmetadata",
+					name: "channel_number",
+					value: "227"
+				},
+				{
+					id: 3056,
+					type: "programmetadata",
+					name: "package_id",
+					value: "2742"
+				},
+				{
+					id: 3056,
+					type: "programmetadata",
+					name: "package_id",
+					value: "2742"
+				},
+				{
+					id: 3056,
+					type: "programmetadata",
+					name: "package_id",
+					value: "2742"
+				},
+				{
+					id: 3056,
+					type: "programmetadata",
+					name: "package_id",
+					value: "2742"
+				},
+				{
+					id: 3057,
+					type: "programmetadata",
+					name: "program_id",
+					value: "EP227413"
+				},
+				{
+					id: 3057,
+					type: "programmetadata",
+					name: "program_id",
+					value: "EP227413"
+				},
+				{
+					id: 3057,
+					type: "programmetadata",
+					name: "program_id",
+					value: "EP227413"
+				},
+				{
+					id: 3057,
+					type: "programmetadata",
+					name: "program_id",
+					value: "EP227413"
+				},
+				{
+					id: 3058,
+					type: "programmetadata",
+					name: "program_id",
+					value: "EP227413"
+				},
+				{
+					id: 3058,
+					type: "programmetadata",
+					name: "program_id",
+					value: "EP227413"
+				},
+				{
+					id: 3058,
+					type: "programmetadata",
+					name: "program_id",
+					value: "EP227413"
+				},
+				{
+					id: 3058,
+					type: "programmetadata",
+					name: "program_id",
+					value: "EP227413"
+				},
+				{
+					id: 3059,
+					type: "programmetadata",
+					name: "guideCategory",
+					value: "Documentary"
+				},
+				{
+					id: 3059,
+					type: "programmetadata",
+					name: "guideCategory",
+					value: "Documentary"
+				},
+				{
+					id: 3059,
+					type: "programmetadata",
+					name: "guideCategory",
+					value: "Documentary"
+				},
+				{
+					id: 3059,
+					type: "programmetadata",
+					name: "guideCategory",
+					value: "Documentary"
+				}]
+			},
+			properties: {
+				entry: [{
+					key: "NSS_CREATE_NOTIFICATION_CODE",
+					value: "200"
+				},
+				{
+					key: "NSS_CREATE_NOTIFICATION_STATUS",
+					value: "OK"
+				},
+				{
+					key: "NSS_CREATE_NOTIFICATION_ID",
+					value: "CLOUD_SCHEDULER_2826353d-69ae-4825-8c14-d7ec2da09981"
+				},
+				{
+					key: "NSS_CREATE_NOTIFICATION_MESSAGE",
+					value: "Success"
+				}]
+			}
+		},
+		referenceStart: "2014-07-24T18:00:00.000Z",
+		referenceEnd: "2014-07-24T19:00:00.000Z",
+		properties: null,
+		keepforever: false
+	}

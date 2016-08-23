@@ -1,0 +1,181 @@
+@media screen and (min-device-width: 768px) and (max-device-width:
+	1024px) {
+	.title {
+		font-size: 14px;
+	}
+	.show-title {
+		font-size: 2.0rem;
+	}
+	.guide-meta-footer {
+		padding: 0 !important;
+		font-size: 1.4rem;
+	}
+	#program_description {
+		font-size: 1.4rem;
+	}
+	.connectionStatus {
+		width: 42.94%;
+	}
+	.grid_10 my_recording {
+		width: 33%;
+	}
+	.loading {
+		top: 0;
+		position: absolute;
+		height: 100% !important;
+		width: 100% !important;
+		left: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 1);
+	}
+	.channelTemplate {
+		width: 150px !important;
+	}
+	.vis.timeline.root {
+		font-size: 11px !important;
+	}
+	.vis.timeline .currenttime {
+		top: 43px !important;
+	}
+	.label_channel {
+		display: block !important;
+	}
+	.input_channel_number {
+		display: block !important;
+	}
+	.btn_ch_up {
+		display: block !important;
+	}
+	.btn_ch_down {
+		display: block !important;
+	}
+	.filterTitle {
+		display: none !important;
+	}
+	.filterFavorite {
+		margin-left: 18px;
+	}
+	.filterContainer {
+		left: 6.5% !important;
+		top: 36.8%;
+	}
+	.right div.current-channel {
+		top: 215px !important;
+	}
+	.right div.current-time {
+		bottom: 180px !important;
+	}
+	.rigth_menu{
+	  padding: 1% 2% 1% 1%;
+	}
+	.rigth_menu li{
+	    font-size: 11px;
+  		padding: 6px;
+	}
+}
+
+@media ( min-width : 1281px) {
+	.loading {
+		top: 0;
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		z-index: 4;
+		background-color: rgba(0, 0, 0, 1);
+	}
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width:
+	667px) and (orientation : landscape) {
+	
+	body{
+	 font-size: 9px;
+	}
+	.myRecordingContent{
+	  font-size: 8px
+	}
+	.show-title {
+		font-size: 1.0rem;
+	}
+	.filterTitle {
+		float: left;
+		font-size: 9px;
+		font-weight: bold;
+	}
+	.vis.timeline.root {
+		font-size: 9px;
+	}
+	.guide-meta-footer {
+		padding: 0 !important;
+		font-size: 0.9rem;
+	}
+	#program_description {
+		font-size: 0.8rem;
+	}
+	.channelTemplate {
+		width: 90px !important;
+	}
+	.filterContainer {
+		display: none !important;
+	}
+	.favoriteIconDisable {
+		display: none !important;
+	}
+	.vis.timeline .item{
+		padding: 0.3%;
+	}
+	.input_channel_number {
+		display: block !important;
+	}
+	.btn_ch_up {
+		display: none !important;
+	}
+	.btn_ch_down {
+		display: none !important;
+	}
+	.rigth_menu{
+	  padding: 2% 3% 2% 2%;
+	}
+	.rigth_menu li{
+	    font-size: 11px;
+  		padding: 6px;
+	}
+	.icon-container li.icon{
+	  font-size: 0.9rem;
+	}
+	.modal-dialog {
+		width: 600px;
+		margin: 10px auto;
+	}
+	.modal-content {
+		-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+	.modal-xs {
+		width: 400px;
+	}
+	.btn {
+		padding: 1px 5px;
+		font-size: 12px;
+		line-height: 1.5;
+		border-radius: 3px;
+	}
+	
+	.modalLeft {
+		float: left;
+		width: 27%;
+		height: auto;
+	}
+	.modalLeft img {
+		width: 100%;
+		height: auto;
+		margin-left: 0;
+	}
+	.modalRight {
+		float: left;
+		width: 60%;
+		height: auto;
+		text-align: left;
+		padding-left: 5%;
+	}}

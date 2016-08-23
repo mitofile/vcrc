@@ -1,0 +1,270 @@
+{   "config_ui": {
+	  "imageServer" : "http://epg.mc-demo.dgosvc.com/epg/programs/3/{programId}/art/v5",	
+	  "channelIcon" : "http://arris-mobile-demo.dgosvc.com/phone/getStationLogo/1?station=",
+      "refresh": true,
+      "fm_keep_alive_subtraction_factor": 50,
+      "refresh_interval_ms": 60000,
+      "refresh_interval_catchup_ms": 600000,
+      "refresh_interval_deleted_ms": 17000,
+      "player_control_show_timeout":5000,
+      "pinForCleanNdvrMoxiData": "123456",
+      "offsetTimeZone_mn": -240,
+      "mainScreenConfig" :{
+      	"menuItems": [
+      					{"title":" Catch-Up TV", "action":"TSR"},
+      					{"title":"Series", "action":"SRS"},
+	      				{"title":"Latest", "action":"PR"},
+	      				{"title":"Scheduled", "action":"SR"},
+	      				{"title":"Recently Deleted", "action":"RD"},
+	      				{"title":"EPG", "action": "","GO":"GUIDE"}
+      				 ],
+      	"options":   [
+      					{"title":"root",
+	      				 "action":"root",
+	      				 "id":"root",
+	      				 "subOptions": [
+				      				{"title":"Sort By",
+				      				 "action":"sort",
+				      				 "id":"sb",
+				      				 "parent":"root",
+				      				 "subOptions": [
+							      				{"title":"Title",
+							      				 "action":"sort",
+							      				 "id":"name", 
+							      				 "parent":"sb",
+							      				 "field":"title",
+							      				 "subOptions":[]
+							      				},
+							      				{"title":"Date",
+							      				 "action":"sort",
+							      				 "id":"date", 
+							      				 "parent":"sb",
+							      				 "field":"date",
+							      				 "subOptions":[]
+							      				}
+											 ]
+				      				},
+				      				{"title":"Sort Options",
+				      				 "action":"sort_options",
+				      				 "id":"sort_op", 
+				      				 "parent":"root",
+				      				 "subOptions": [
+							      				{"title":"Ascendent",
+							      				 "action":"sort_options",
+							      				 "id":"asc", 
+							      				 "parent":"sort_op",
+							      				  "field":"asc",
+							      				 "subOptions": []
+							      				},
+							      				{"title":"Descendent",
+							      				 "action":"sort_options",
+							      				 "id":"desc", 
+							      				  "parent":"sort_op",
+							      				   "field":"desc",
+							      				 "subOptions":[]
+							      				}
+											 ]
+				      				},
+				      				{"title":"Recording Options",
+				      				 "action":"rec_options",
+				      				 "id":"rec_op", 
+				      				 "parent":"root",
+				      				 "subOptions": [
+							      				{"title":"Start",
+							      				 "type": "list",
+							      				 "action":"start_options",
+							      				 "id":"start", 
+							      				 "parent":"rec_op",
+							      				 "subOptions":[]
+							      				},
+							      				{"title":"End",
+							      				 "type": "list",
+							      				 "action":"end_options",
+							      				 "id":"end", 
+							      				  "parent":"end_op",
+							      				  "subOptions":[]
+							      				},
+							      				{"title":"Keep",
+							      				 "type": "list",
+							      				 "action":"keep_options",
+							      				 "id":"keep", 
+							      				 "parent":"keep_op",
+							      				 "subOptions":[]
+							      				},
+							      				{"title":"Accept",
+							      				 "type": "list",
+							      				 "action":"accept_options",
+							      				 "id":"accept", 
+							      				 "parent":"accept_op",
+							      				 "subOptions":[]
+							      				}
+											 ]
+				      				}
+								 ]
+				    	}
+				    ]
+      },
+	"infoScreenConfig" :
+	{
+		"menuItem":[
+			{
+				"type":"CAPTURING",
+				"menuActions":
+				[
+					{"title":"Watch", "action":"play"},
+					{"title":"Stop", "action":"stop"},
+					{"title":"Delete", "action":"delete"},
+					{"title":"Options", "action":"option_recording"},
+					{"title":"More Like This", "action":"more"},
+					{"title":"Share with", "action":"shareTo"},
+					{"title":"Close", "action":"close"}
+				]
+			},
+			{
+				"type":"COMPLETED",
+				"menuActions":
+				[
+					{"title":"Watch", "action":"play"},
+					{"title":"Delete", "action":"delete"},
+					{"title":"Options", "action":"option_recording"},
+					{"title":"More Like This", "action":"more"},
+					{"title":"Share with", "action":"shareTo"},
+					{"title":"Close", "action":"close"}
+				]
+			},
+			{
+				"type":"CATCHUP_TV",
+				"menuActions":
+				[
+					{"title":"Watch", "action":"play"},
+					{"title":"More Like This", "action":"more"},
+					{"title":"Close", "action":"backRecordingSet"}
+				]
+			},
+			{
+				"type":"SCHEDULED",
+				"menuActions":
+				[
+					{"title":"Cancel Recording ", "action":"cancel"},
+					{"title":"Options", "action":"option_recording"},
+					{"title":"More Like This", "action":"more"},
+					{"title":"Close", "action":"close"}
+				]
+			},
+			{
+				"type":"ERROR",
+				"menuActions":
+				[
+					{"title":"Delete ", "action":"delete"},
+					{"title":"Close", "action":"close"}
+				]
+			},
+					{
+				"type":"DELETED",
+				"menuActions":
+				[
+					{"title":"Restore ", "action":"restore"},
+					{"title":"Close", "action":"close"}
+				]
+			},
+			{
+				"type":"CONFLICT",
+				"menuActions":
+				[
+					{"title":"Cancel Recording ", "action":"cancel"},
+					{"title":"Reschedule Recording ", "action":"reschedule"},
+					{"title":"Close", "action":"close"}
+				]
+			},
+			{
+				"type":"SERIES",
+				"menuActions":
+			[
+					{"title":"Watch", "action":"play"},
+					{"title":"Close", "action":"close"}
+			]
+			},
+			{
+				"type":"EPG-PROGRAM",
+				"menuActions":
+			[
+					{"title":"Schedule", "action":""},
+					{"title":"Record", "action":""}
+			]
+			}
+		]
+	},
+	"seriesMainScreen" :
+	{
+		"menuItem":[
+			{
+				"type":"SCHEDULED",
+				"menuActions":
+			      [
+					{"title":"Cancel Series", "action":"cancel_series"},
+					{"title":"Delete Series", "action":"delete_series"},
+					{"title":"Options", "action":"option_series"},
+					{"title":"Close", "action":"close"}
+		 	      ]
+			},
+			{
+				"type":"RECORDINGS",
+				"menuActions":
+			      [
+					{"title":"Delete Series", "action":"delete_series"},
+					{"title":"Options", "action":"option_series"},
+					{"title":"Close", "action":"close"}
+		 	      ]
+			}
+		   ]
+	},
+	"recordingSetMainScreen" :
+	{
+		"menuItem":[
+			{
+				"type":"RECORDING_SET",
+				"menuActions":
+			      [
+					{"title":"Close", "action":"close"}
+		 	      ]
+			},
+			{
+				"type":"SubscriberSeriesRecording",
+				"menuActions":
+			      [
+					{
+					  "status":"ACTIVE", 
+					  "menuActions":[
+					  			{"title":"Cancel Series", "action":"cancel_series"},
+								{"title":"Delete Series", "action":"delete_series"},
+								{"title":"Options", "action":"option_series"},
+								{"title":"Close", "action":"close"} 
+					  ]
+					},
+					{
+					  "status":"INACTIVE", 
+					  "menuActions":[
+					  		  {"title":"Delete Series", "action":"delete_series"},
+							  {"title":"Options", "action":"option_series"},
+					          {"title":"Close", "action":"close"}
+					  ]
+					},
+					{
+					  "status":"DELETED", 
+					  "menuActions":[
+					  		{"title":"Close", "action":"close"},
+					  		{"title":"Restore", "action":"restoreSeries"}
+					  ]
+					}
+					
+		 	      ]
+			}
+		   ]
+	},
+      "playbackScreenConfig" :{
+
+      }
+
+	}
+
+}

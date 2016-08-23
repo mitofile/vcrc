@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- 	<meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<!-- 	<meta name="viewport" content="width=device-width; initial-scale=1; minimal-ui"/> -->
+<!-- 	<meta name="apple-mobile-web-app-capable" content="yes"> -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0"/>
+<link href="css/images/favicon.ico" rel="shortcut icon" />
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<title>Guide Live TV</title>
+
+  <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+  <!--<link rel="stylesheet" type="text/css" href="js/thrid-party/videojs-hls/node_modules/video-js.css" />-->
+  <!-- video.js -->
+  <script src="js/thrid-party/videojs-hls/video.dev.js"></script>
+    <!-- Media Sources plugin -->
+  <script src="js/thrid-party/videojs-hls/videojs-media-sources.js"></script>
+    <!-- HLS plugin -->
+  <script src="js/thrid-party/videojs-hls/videojs-hls.js"></script>
+  
+    <!-- segment handling -->
+  <script src="js/thrid-party/videojs-hls/xhr.js"></script>
+  <script src="js/thrid-party/videojs-hls/flv-tag.js"></script>
+  <script src="js/thrid-party/videojs-hls/stream.js"></script>
+  <script src="js/thrid-party/videojs-hls/exp-golomb.js"></script>
+  <script src="js/thrid-party/videojs-hls/h264-extradata.js"></script>
+  <script src="js/thrid-party/videojs-hls/h264-stream.js"></script>
+  <script src="js/thrid-party/videojs-hls/aac-stream.js"></script>
+  <script src="js/thrid-party/videojs-hls/metadata-stream.js"></script>
+  <script src="js/thrid-party/videojs-hls/segment-parser.js"></script>
+  
+  <!-- m3u8 handling -->
+  <script src="js/thrid-party/videojs-hls/m3u8/m3u8-parser.js"></script>
+  <script src="js/thrid-party/videojs-hls/playlist.js"></script>
+  <script src="js/thrid-party/videojs-hls/playlist-loader.js"></script>
+  <script src="js/thrid-party/videojs-hls/pkcs7.unpad.js"></script>
+  <script src="js/thrid-party/videojs-hls/decrypter.js"></script>
+  <script src="js/thrid-party/videojs-hls/bin-utils.js"></script>
+ 
+  
+  <script>
+    videojs.options.flash.swf = 'js/thrid-party/videojs-hls/video-js.swf';
+  </script>
+  
+</head>
+<body oncontextmenu="return false;">
+
+  <main> 
+	<header id="headerPage" class="container_48 rogers-header clearfix">
+	   <div class="container headerRow">
+	      <div class="row-fluid">
+	         <div id="AlertContainer" class="alertCommon"></div>
+	         <div class="col-md-3">
+	            <div class="row">
+	               <div class="title">Guide Live TV</div>
+	            </div>
+	         </div>
+	         <div class="col-md-7">
+	            <div class="row">
+	               <div class="connectionStatus">
+	                  <img src="css/images/linkAvailable.png" class="imgStatus" />
+	                  <div id="linkIconHeader" class="link-icon"> 
+	                  </div>
+	               </div>
+	            </div>
+	         </div>
+	         <div class="col-md-3 headerColumn2">
+	            <div class="userInfoContent">
+	                <i id="myRecordingIcon" class="fa fa-folder-open userIcon"></i>
+	                <span id="my_recordings" class ="userStyle">My Recordings</span>
+	                  <!--  <a href="" id="my_recordings"><img src="css/images/movies-icon.png"> MY RECORDINGS</a>  --> 
+	            </div>
+	         </div>
+			 <div class="col-md-2 headerColumn2">
+   				<div class="userInfoContent">
+      				<i id="subscriberIcon" class="fa fa-user userIcon" data-placement="bottom" data-toggle="popover"></i>
+      				<span id="subscriberNameTitle" class ="userStyle"></span>
+   				</div>
+			</div>
+			<div class="col-md-2 headerColumn2">
+   				<div class="userInfoContent">
+      				<i id="userIcon" class="fa fa-users userIcon2" data-placement="bottom" data-toggle="popover"></i>
+      				<span id="userNameTitle" class ="userStyle">User2</span>
+   				</div>
+			</div>
+			<div class="col-md-2 headerColumn2">
+   				<div class="userInfoContent">
+      				<i id="deviceIcon" class="fa fa-television userIcon" data-placement="bottom" data-toggle="popover"></i>
+      				<span id="deviceNameTitle" class ="userStyle">Device</span>
+   				</div>
+			</div>
+	      </div>
+	   </div>
+	</header>
+
+    <!--<div class="container container_48 clearfix contentInfo">-->
+    <div class="container">
+	   <div id="channelEntry" style="display: none;">
+          <p id="channelPointed" class="channelWrote"></p>
+       </div>
+      <!--<div class="grid_28 program-content">-->
+		<div class="left row">
+			<div class="col-xs-4 col-md-4 col-lg-4">
+				<div class="posterTitleContainer">
+					<img src="css/images/loadinfo.net.gif" class="loading_Poster" />
+				</div>
+				<img id="titlePoster" class="posterTitle">
+			</div>
+			<div class="col-xs-offset-1 col-xs-13 col-md-offset-1 col-md-13 col-lg-offset-1 col-lg-13 ">
+				<h1 id="program_title" class="show-title"></h1>
+				<ul class="guide-meta-footer">
+					<li id="program_time"><strong></strong></li>
+				</ul>
+
+				<ul class="icon-container">
+					<li class="icon icon-solid new">New</li>
+					<li class="icon icon-border rating"></li>
+				</ul>
+
+				<p id="program_description" class="headerdescription"></p>
+				<!--<label>Channel</label><input id="channelNumber" type="text" style="color:  black;"/> -->
+			</div>
+		</div>
+		<!--<div class="grid_18 pip-container">-->
+      <div id="contentVideo" class="right">
+          <div id="assetType" class="asset-Type"></div>
+          <div id="current_time" class="current-time">00:00</div>
+          <div id="current_channel" class="current-channel">NRO (CH)</div>
+        <!--</div>-->
+      </div>
+      <div class="clear"></div>
+
+    </div>
+    <div class="channels_controls">
+<!--     	<label class="label_channel">CH</label> -->
+    	<input id="channelNumber" type="number" class="input_channel_number"/>
+    </div>
+    <div class="filterContainer">
+      <div class="filterTitle">Filter</div>
+      <div id="favoriteIcon"class="filterFavoriteDisabled"></div>
+    </div>
+    <div class="container_grid">
+   	  <div id="visualization" class="container_48 content-area"></div>
+	</div>
+	<div class="loadingProgramGrid">
+		<img src="css/images/loadinfo.net.gif" class="loading_grid_icon">
+	</div>
+	<div class="footerGrid">
+	</div>
+  </main>
+
+  <div class="rigth_menu">
+    <ul>
+    </ul>
+  </div>
+  
+  <div id="popoverContent" style="display: none">
+    <div class="modalContentOption popoverDisplay">
+         <h3 class="popover-title quotaLabel">Quota Infomation</h3>
+         <div class="progress inforQuota">
+ 		   <div id="progressUsed" data-toggle="tooltip" data-placement="bottom" title="" class="progress-bar progress-bar-danger" role="progressbar" style="width:0%">used</div>
+ 		   <div id="progressKeep" data-toggle="tooltip" data-placement="bottom" title="" class="progress-bar progress-bar-warning customQuota" role="progressbar" style="width:0%"></div>
+           <div id="progressFree" data-toggle="tooltip" data-placement="bottom" title="" class="progress-bar progress-bar-success" role="progressbar" style="width:100%">Free</div>
+         </div>
+    </div>
+  </div>
+  
+  <div id="popoverUserContent" style="display: none">
+    <div class="container popoverUserList">
+      <div class ="row">
+          <div id="availableUserList" class="list-group userList">
+            <div id ="newUser" class="row">
+               <div class = "col-md-3">
+                 <i class="fa fa-user userItem"></i>
+               </div>
+               <div class = "col-md-13">
+                 <input id="labelNewUser" type="text" maxlength="12" class="userItemList fixedUserItem" value="new user"></input>
+               </div>
+               <div class = "col-md-2">
+                 <i class="fa fa-user-plus userItemLock"></i>
+               </div>
+            </div>
+		  </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="popoverDeviceContent" style="display: none">
+    <div class="container popoverUserList">
+      <div class ="row">
+          <div id="availableDeviceList" class="list-group userList">
+            <div id="deviceUnknownElement" class="row">
+               <div class="col-md-3">
+                 <i class="fa fa-television userItem"></i>
+               </div>
+               <div class="col-md-13">
+                  <span id="unknownDeviceItem" class="userItemList">Unknown</span>
+               </div>
+               <div class="col-md-2">
+                 <i class="fa fa-circle userItemLock"></i>
+               </div>
+            </div>
+		  </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="testMonitor" title="Test Monitor">
+  </div>
+
+	<!-- 
+  MODAL INFO SCREEN
+  -->
+  <div class="modal fade" id="modalInfoScreen" tabindex="-1" role="dialog" aria-labelledby="modalInfoScreen" aria-hidden="true">
+    <div class="modal-dialog modal-xs modal-sm modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title" id="modalInfoScreen_title"></h4>
+        </div>
+
+        <div class="modal-body-message" id="modalInfoScreen_body">
+          <!--<div class="modalContainer">-->
+            <div class="modalLeft">
+              <img id="modalInfoScreen_program_poster">
+            </div>
+            <div class="modalRight">
+              <ul class="guide-meta-footer">
+                <li id="modalInfoScreen_program_time"><strong></strong></li>
+              </ul>
+
+              <ul class="icon-container">
+                <li class="icon icon-solid new">New</li>
+                <li class="icon icon-border rating"></li>
+              </ul>
+
+              <p id="modalInfoScreen_program_description"></p>
+            </div>
+            <div class="modalClear"></div>
+          <!--</div>-->
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger">Record</button>
+          <button type="button" class="btn btn-info">Schedule</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  END MODAL INFO SCREEN
+  -->
+  
+  	<!-- 
+  MODAL INFO SCREEN
+  -->
+  <div class="modal fade" id="modalScheduleOptions" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="modalScheduleOptions" aria-hidden="true">
+    <div class="modal-dialog modal-xs modal-sm modal-lg">
+      <div id="modalContentOption" class="modalOption-content">
+
+        <div class="modal-header">
+          <span id="scheduleOpHeader">Recording Options</span>
+          <hr class = "headerTitle">
+        </div>
+
+        <div class="modal-body-message bodyScheduleOption" id="modalScheduleOption_body">
+            <div id="containerSchedule" class="modalContentOption">
+              <div class="row">
+                <div class="form-group row">
+                  <div class="col-sm-4"><span id="Start" class="labelIncremental">Start</span></div>
+                  <div class="col-sm-10"><input id="Start" type="text" value="" readonly="readonly" name="Start"></div>
+              	</div>
+              </div>
+              <div class="row">
+                <div class="form-group row">
+                  <div class="col-sm-4"><span id="End" class="labelIncremental">Stop</span></div>
+                  <div class="col-sm-10"><input id="End" type="text" value="" readonly="readonly" name="End"></div>
+              	</div>  
+              </div>
+              <div class="row">
+                <div class="form-group row">
+                  <div class="col-sm-4"><span class="labelIncremental">Keep</span></div>
+                  <div class="col-sm-10"><input id="Keep" type="text" value="" readonly="readonly" name="Keep"></div>
+                </div>
+              </div>
+            </div>
+          <!--</div>-->
+        </div>
+        <div class="modalScheduleOption-footer">
+          <div class="buttonRow">
+            <label class="checkbox-inline footerCheckbox"><input id="checkBoxAsk" type="checkbox" value="">Don't show again</label> 
+          	<button id="sendOptions" class="btn btn-default buttonModal">Accept</button>
+		  	<button id="sendDefault"class="btn btn-default buttonModal">Close</button>
+		  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  END MODAL INFO SCREEN
+  -->
+  
+  <!-- 
+  MODAL RESUME SCREEN
+  -->
+  <div class="modal fade" id="modalResumeAt" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="modalResumeAt" aria-hidden="true">
+    <div class="modal-dialog modal-xs modal-sm modal-lg">
+      <div class="modalResume-content">
+
+        <div class="modal-header">
+          <span>Resume Playback</span>
+          <hr class = "headerTitle">
+        </div>
+        <div class="modal-body-message bodyResumeAt" id="modalResumeAt_body">
+            <div class="modalContentOption">
+              <div class="row">
+			    <span class="labelIncremental">Watched</span>
+			  </div>
+			  <div class="rowResumeValue">
+			    <span class="watched" id="watched">0 minute</span>
+			    <div class="progress progressResumeAt">
+                  <div id="progressBarResume" class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
+			    </div>
+			  </div>
+			  <div class="totalVideo">
+			    <span id=totalTime>00:00:00</span>
+			  </div>
+            </div>
+          <!--</div>-->
+        </div>
+        <div class="modalResumeAt-footer">
+           <button id="resumeVideo" class="btn btn-default buttonModal resumeAt">Resume</button>
+		   <button id="restartViedo"class="btn btn-default buttonModal resumeAt">Restart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  END MODAL INFO SCREEN
+  -->
+  
+  
+  <!-- 
+  MODAL RESUME SCREEN
+  -->
+  <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="modalLogin" aria-hidden="true">
+    <div class="modal-dialog modal-xs modal-sm modal-lg">
+      <div class="modalLogin-content">
+        <div class="modal-header">
+          <span>Please Login</span>
+          <hr class = "headerTitle">
+        </div>
+        <div class="modal-body-message bodyModalLogin" id="modalLogin_body">
+            <div class="modalContentOptionLogin">
+        	 		<input id="inputSubscriberId" class="form-control" placeholder="Subscriber ID" required="" autofocus="">
+        			<div class="checkbox">
+          				<label>
+            				<input id="rememberCheck" type="checkbox" value="remember-me"> Remember me
+          				</label>
+        			</div>
+        	    <button id="signButton" class="btn btn-lg btn-primary btn-block">Login</button>
+            </div>
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 
+  END MODAL INFO SCREEN
+  -->
+  
+  <div class="loading" >
+  <span id="loadingIconHeader" class="loading-icon">
+     <img src="css/images/loading-spinner.gif" alt="loading icon" />    
+    </span>
+  </div>
+  <link
+    href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+    rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/thrid-party/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="css/thrid-party/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/thrid-party/jjsonviewer.css" />
+  <link rel="stylesheet" type="text/css" href="css/thrid-party/vis.css" />
+  <link rel="stylesheet" type="text/css" href="css/thrid-party/jquery.bootstrap-touchspin.css" />
+  
+  <link rel="stylesheet" type="text/css" href="css/guide.css" />
+  <link rel="stylesheet" type="text/css" href="css/guide_mobile.css" />
+  
+
+  <script type="text/javascript" src="js/thrid-party/jquery-1.10.2.js"></script>
+  <script type="text/javascript" src="js/thrid-party/jquery-ui-1.10.4.min.js"></script>
+  <script type="text/javascript">
+// Change JQueryUI plugin names to fix name collision with Bootstrap:
+   $.widget.bridge('uitooltip', $.ui.tooltip);
+   $.widget.bridge('uibutton', $.ui.button);
+</script>
+  <script type="text/javascript" src="js/thrid-party/underscore-min.js"></script>
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+  <script type="text/javascript" src="js/thrid-party/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/thrid-party/vis.js"></script>
+  <script type="text/javascript" src="js/thrid-party/jjsonviewer.js"></script>
+  <script type="text/javascript" src="js/thrid-party/jquery.bootstrap-touchspin.js"></script>
+  <script type="text/javascript" src="js/testMonitorController.js"></script>
+  <script type="text/javascript" src="js/guide.js"></script>
+  <script type="text/javascript" src="js/deviceManager.js"></script>
+  <script type="text/javascript" src="js/guideKeyboard.js"></script>
+  <script type="text/javascript" src="js/guideManager.js"></script>
+
+  <script type="text/javascript" src="js/thrid-party/MWU-1.0.0.js"></script>
+  <script type="text/javascript" src="js/ndvrInfoItem.js"></script>
+   <script type="text/javascript" src="js/ndvrCatchup.js"></script>
+  <script type="text/javascript" src="js/ndvrRecord.js"></script>
+  <script type="text/javascript" src="js/ndvrSeries.js"></script>
+  <script type="text/javascript" src="js/ndvrManager.js"></script>
+  
+   <!-- error handling -->
+  <script src="js/player.js"></script>
+
+</body>
+
+</html>

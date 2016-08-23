@@ -1,0 +1,207 @@
+{
+    "refresh_interval_ms": 60000,
+    "refresh_interval_Catchup_ms": 60000,
+    "still_grid_minutes": 60,
+    "lazy_load_right_minutes": 180,
+    "lazy_load_left_minutes": 180,
+    "lazy_load_request_hours": 6,
+    "channels_count": {
+        "Windows": 10,
+        "Macintosh": 10,
+        "iPad": 10,
+        "iPhone": 5,
+        "Android": 3
+    },
+    "infoScreenConfig": {
+        "menuItem": [
+            {
+                "status": "EPG",
+                "menuActions": [
+                    {
+                        "title": "Schedule",
+                        "action": "scheduleProg",
+                        "show_when" : ["future"]
+                    },
+                    {
+                        "title": "Record",
+                        "action": "scheduleProg",
+                        "show_when" : ["now"]
+                    },
+                    {
+                        "title": "Schedule Series",
+                        "action": "scheduleSeriesOption",
+                        "show_when" : ["future"],
+                        "show_only" : ["series"]
+                    },
+                    {
+                        "title": "Record Series",
+                        "action": "scheduleSeriesOption",
+                        "show_when" : ["now"],
+                        "show_only" : ["series"]
+                    }
+                ]
+            },
+            {
+                "status": "SCHEDULED",
+                "menuActions": [
+                    {
+                        "title": "Cancel Schedule",
+                        "action": "cancelScheduleProg",
+                        "show_when" : ["future"]
+                    },
+                    {
+                        "title": "Options",
+                        "action": "recordingOptions",
+                        "show_when" : ["now","future"]
+                    }
+                ]
+            },
+            {
+                "status": "RECEIVED",
+                "menuActions": [
+                    {
+                        "title": "Cancel Schedule",
+                        "action": "cancelScheduleProg",
+                        "show_when" : ["future"]
+                    },
+                    {
+                        "title": "Options",
+                        "action": "recordingOptions",
+                        "show_when" : ["now","future"]
+                    }
+                ]
+            },
+            {
+                "status": "CATCHUP_TV",
+                "menuActions": [
+                    {
+                        "title": "Start Over",
+                        "action": "startOver",
+                        "show_when" : ["now"]
+                    },
+                    {
+                        "title": "Watch Recording",
+                        "action": "preview",
+                        "show_when" : ["past"]
+                    },
+                    {
+                        "title": "Record",
+                        "action": "scheduleProg",
+                        "show_when" : ["now"]
+                    }
+                ]
+            },
+            {
+                "status": "ERROR",
+                "menuActions": [
+                    {
+                        "title": "Delete Recording",
+                        "action": "deleteProg",
+                        "show_when" : ["past","now"]
+                    },
+                    {
+                        "title": "Reschedule Recording",
+                        "action": "reschedule",
+                        "show_when" : ["now"]
+                    }
+                ]
+            },
+            {
+                "status": "CONFLICT",
+                "menuActions": [
+                    {
+                        "title": "Cancel Schedule",
+                        "action": "cancelScheduleProg",
+                        "show_when" : ["past","now","future"]
+                    },
+                    {
+                        "title": "Reschedule Recording",
+                        "action": "reschedule",
+                        "show_when" : ["now","future"]
+                    }
+                ]
+            },
+            {
+                "status": "CAPTURING",
+                "menuActions": [
+                    {
+                        "title": "Watch Recording",
+                        "action": "preview",
+                        "show_when" : ["past","now"],
+                        "show_only" : ["notPlaying"]
+                    },
+                    {
+                        "title": "Stop Recording",
+                        "action": "stopProg",
+                        "show_when" : ["now"]
+                    },
+                    {
+                        "title": "Delete Recording",
+                        "action": "deleteProg",
+                        "show_when" : ["past", "now"]
+                    },
+                    {
+                        "title": "Options",
+                        "action": "recordingOptions",
+                        "show_when" : ["past","now"]
+                    }
+                ]
+            },
+            {
+                "status": "COMPLETED",
+                "menuActions": [
+                    {
+                        "title": "Watch Recording",
+                        "action": "preview",
+                        "show_when" : ["past","now"],
+                        "show_only" : ["notPlaying"]
+                    },
+                    {
+                        "title": "Delete Recording",
+                        "action": "deleteProg",
+                        "show_when" : ["past","now"]
+                    },
+                    {
+                        "title": "Options",
+                        "action": "recordingOptions",
+                        "show_when" : ["past","now"]
+                    }
+                ]
+            }
+        ]
+    },
+    "ScheduleOptions": [
+    	{
+    	 "title": "offset_Start",
+    	 "friendMsg" : ["5 minutes early", "2 minutes early", "1 minute early", "On time", "1 minute after", "2 minutes after", "5 minutes after"],
+    	 "internalValues" : ["-5.0", "-2.0", "-1.0", "0.0", "1.0", "2.0", "5.0"]
+    	},
+    	{
+    	  "title": "offset_End",
+    	 "friendMsg" : ["5 minutes early", "2 minutes early", "1 minute early", "On time", "1 minute after", "2 minutes after", "5 minutes after", "10 minutes after", "15 minutes after", "30 minutes after", "60 minutes after","90 minutes after"],
+    	 "internalValues" : ["-5.0", "-2.0", "-1.0", "0.0", "1.0", "2.0", "5.0", "10.0", "15.0", "30.0", "60.0", "90.0"]
+    	},
+    	{
+    	  "title": "keep",
+    	 "friendMsg" : ["Keep until space is needed", "Keep until I delete"],
+    	 "internalValues" : ["UNTIL_SPACE_NEEDED","FOREVER"]
+    	},
+    	{
+    	  "title": "Accept",
+    	 "friendMsg" : ["Repeats", "Only first run"],
+    	 "internalValues" : ["REPEATS","FIRST_RUN_ONLY"]
+    	}
+    ],
+    "ChannelOptions": [
+        {
+           "title": "Tune to this channel",
+           "action": "tune"
+        },
+        {
+           "title": "Stop live streaming",
+           "action": "stopLive"
+        }
+     ],
+    "monitorTool": [
+    ]
+}

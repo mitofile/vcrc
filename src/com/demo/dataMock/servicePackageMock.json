@@ -1,0 +1,13 @@
+{
+	"id": "QA_TIME_10000",
+	"quotaConflictResolutionPolicy": "OLDEST_CONTENT_FIRST_EXPIRE_POLICY",
+	"assignedTuners": 3,
+	"activeSessionQuota": 5,
+	"isStartFromTheBeginning": true,
+	"name": "QA_TIME_10000",
+	"quotaType": "MINUTES",
+	"assignedQuota": 10000,
+	"uri": "/sms/v3/servicePackages/QA_TIME_10000",
+    "availabilityWindow": 20,
+    "features": [ "CATCH_UP", "START_OVER", "PAUSE_LIVE_TV" ]
+}

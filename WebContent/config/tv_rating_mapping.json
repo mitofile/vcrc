@@ -1,0 +1,13 @@
+{   "tv_ratings":  [
+						{"title":"UNRATED", "value": 0},
+	      				{"title":"TV-Y", "value": 1},
+	      				{"title":"TV-Y7FV", "value": 2},
+	      				{"title":"TVY7FV", "value": 3},
+	      				{"title":"TVG", "value": 4},
+	      				{"title":"TV-PG", "value": 5},
+	      				{"title":"TV-14", "value": 6},
+	      				{"title":"TVMA", "value": 7},
+	      				{"title":"TVNR", "value": 9}
+
+      				]
+}

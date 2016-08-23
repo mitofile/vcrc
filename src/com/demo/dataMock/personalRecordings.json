@@ -1,0 +1,532 @@
+{
+	"responseHeader": {
+		"ETag": [
+			["2015-11-30 16:00:18.635"]
+		],
+		"X-ARRS-QUOTA-TYPE": [
+			["MINUTES"]
+		],
+		"X-ARRS-QUOTA-MARKED-TO-KEEP": [
+			["0.0"]
+		],
+		"Date": [
+			["Mon, 30 Nov 2015 16:01:36 GMT"]
+		],
+		"Transfer-Encoding": [
+			["chunked"]
+		],
+		"X-ARRS-QUOTA-USED": [
+			["1984.69"]
+		],
+		"Content-Type": [
+			["application/json;charset=UTF-8"]
+		],
+		"Connection": [
+			["close"]
+		],
+		"Server": [
+			["Apache-Coyote/1.1"]
+		],
+		"X-ARRS-QUOTA-TOTAL": [
+			["2000.0"]
+		],
+		"null": [
+			["HTTP/1.1 200 OK"]
+		]
+	},
+	"entities": [{
+		"effectiveRecordingStart": "2015-11-30T16:00:18Z",
+		"scope": "PRIVATE",
+		"type": "SubscriberEventRecording",
+		"airingId": "548796624",
+		"eventEnd": "2015-11-30T16:30:00Z",
+		"id": "3ccc4838-1a45-456b-a8ae-726b43b3eb3e",
+		"title": "Dirt trax telev",
+		"programId": "20945550",
+		"recordingId": "d56985c86b464cc0bf21c31240965024",
+		"subscriberId": "ani",
+		"end": "2015-11-30T16:30:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-30T16:00:18Z",
+		"eventStart": "2015-11-30T16:00:18Z",
+		"channelId": "27911",
+		"status": {
+			"state": "CAPTURING"
+		},
+		"effectiveEnd": "2015-11-30T16:30:00Z",
+		"programStartTime": "2015-11-30T16:00:00Z",
+		"effectiveRecordingEnd": "2015-11-30T16:30:00Z",
+		"size": 0.82,
+		"createdOn": "2015-11-30T16:00:18Z",
+		"duration": 29.69,
+		"start": "2015-11-30T16:00:18Z",
+		"program": {
+			"id": 138033,
+			"uri": "/cs/v3/programs/138033"
+		},
+		"effectiveStart": "2015-11-30T16:00:18Z",
+		"retentionExpiryDate": "2015-12-30T16:00:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T10:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Grandma's Kisses; Squidville",
+		"type": "SubscriberEventRecording",
+		"airingId": "434408559",
+		"eventEnd": "2015-11-27T11:00:00Z",
+		"id": "a2e533f2-a9f9-4c51-b972-80457ed18bef",
+		"title": "SpongeBob SquarePants",
+		"programId": "2659897",
+		"recordingId": "5df244414c82420eaa7dbd62bafb1f46",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T11:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-27T10:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T11:00:00Z",
+		"subscriberUniqueCopyRecordingId": "cb9b1a1ee55246329291c4c884824dbc",
+		"programStartTime": "2015-11-27T10:30:00Z",
+		"effectiveRecordingEnd": "2015-11-27T11:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T10:30:00Z",
+		"program": {
+			"id": 113877,
+			"uri": "/cs/v3/programs/113877"
+		},
+		"effectiveStart": "2015-11-27T10:30:00Z",
+		"retentionExpiryDate": "2015-12-02T10:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T12:55:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Mooncation; Mr. Krabs Takes A Vacation",
+		"type": "SubscriberEventRecording",
+		"airingId": "434409110",
+		"eventEnd": "2015-11-27T13:30:00Z",
+		"id": "32e96390-61f2-4c55-89ab-2af8c689407c",
+		"title": "SpongeBob SquarePants",
+		"programId": "20913486",
+		"recordingId": "ad8a5a0a5b064a939009cdd5b0ddfa09",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T13:30:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-27T13:00:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T13:30:00Z",
+		"subscriberUniqueCopyRecordingId": "42bab513b20146828ccc50f35e77b38d",
+		"programStartTime": "2015-11-27T13:00:00Z",
+		"effectiveRecordingEnd": "2015-11-27T13:35:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T13:00:00Z",
+		"program": {
+			"id": 113903,
+			"uri": "/cs/v3/programs/113903"
+		},
+		"effectiveStart": "2015-11-27T13:00:00Z",
+		"retentionExpiryDate": "2015-12-02T13:00:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T19:55:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Roller Cowards; Bucket Sweet Bucket",
+		"type": "SubscriberEventRecording",
+		"airingId": "486023774",
+		"eventEnd": "2015-11-27T20:30:00Z",
+		"id": "e5ea0a48-c401-48cb-bcca-17f00cf932fc",
+		"title": "SpongeBob SquarePants",
+		"programId": "6829405",
+		"recordingId": "19692f47a83f4b188c86abc0b6310b22",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T20:30:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-27T20:00:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T20:30:00Z",
+		"subscriberUniqueCopyRecordingId": "0d55c65dbc25494396890918892c1393",
+		"programStartTime": "2015-11-27T20:00:00Z",
+		"effectiveRecordingEnd": "2015-11-27T20:35:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T20:00:00Z",
+		"program": {
+			"id": 133491,
+			"uri": "/cs/v3/programs/133491"
+		},
+		"effectiveStart": "2015-11-27T20:00:00Z",
+		"retentionExpiryDate": "2015-12-02T20:00:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T20:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "To Love a Patty; Breath of Fresh Squidward",
+		"type": "SubscriberEventRecording",
+		"airingId": "486023775",
+		"eventEnd": "2015-11-27T21:00:00Z",
+		"id": "42a8ef03-7d17-4c19-82be-f1ecdb04a5aa",
+		"title": "SpongeBob SquarePants",
+		"programId": "6829327",
+		"recordingId": "7dd90d1e84db4967a62227c3bea56da3",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T21:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-27T20:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T21:00:00Z",
+		"subscriberUniqueCopyRecordingId": "718627ef3cad4ff1abf827d07b42697d",
+		"programStartTime": "2015-11-27T20:30:00Z",
+		"effectiveRecordingEnd": "2015-11-27T21:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T20:30:00Z",
+		"program": {
+			"id": 133494,
+			"uri": "/cs/v3/programs/133494"
+		},
+		"effectiveStart": "2015-11-27T20:30:00Z",
+		"retentionExpiryDate": "2015-12-02T20:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T22:55:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "The Bully; Just One Bite",
+		"type": "SubscriberEventRecording",
+		"airingId": "434408566",
+		"eventEnd": "2015-11-27T23:30:00Z",
+		"id": "7997c9cd-6607-4ecb-8ba0-b09225b094fb",
+		"title": "SpongeBob SquarePants",
+		"programId": "3249008",
+		"recordingId": "62750087020f43a5af2b838081ceaefa",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-27T23:30:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:40Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-27T23:00:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-27T23:30:00Z",
+		"subscriberUniqueCopyRecordingId": "e078a1bf1006454e852342be55612c16",
+		"programStartTime": "2015-11-27T23:00:00Z",
+		"effectiveRecordingEnd": "2015-11-27T23:35:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:40Z",
+		"duration": 30,
+		"start": "2015-11-27T23:00:00Z",
+		"program": {
+			"id": 113931,
+			"uri": "/cs/v3/programs/113931"
+		},
+		"effectiveStart": "2015-11-27T23:00:00Z",
+		"retentionExpiryDate": "2015-12-02T23:00:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-27T23:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "The Nasty Patty; The Idiot Box",
+		"type": "SubscriberEventRecording",
+		"airingId": "434408569",
+		"eventEnd": "2015-11-28T00:00:00Z",
+		"id": "f7d75831-a510-4ed7-bf14-9939bdb72bee",
+		"title": "SpongeBob SquarePants",
+		"programId": "3249010",
+		"recordingId": "a98f6ab1a7c04f24a7e0c6a437724cda",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-28T00:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:41Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-27T23:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-28T00:00:00Z",
+		"subscriberUniqueCopyRecordingId": "00dcc59cbeca449fa7109979683c5cfc",
+		"programStartTime": "2015-11-27T23:30:00Z",
+		"effectiveRecordingEnd": "2015-11-28T00:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:41Z",
+		"duration": 30,
+		"start": "2015-11-27T23:30:00Z",
+		"program": {
+			"id": 113935,
+			"uri": "/cs/v3/programs/113935"
+		},
+		"effectiveStart": "2015-11-27T23:30:00Z",
+		"retentionExpiryDate": "2015-12-02T23:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-28T10:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Pre-Hibernation Week; Life of Crime",
+		"type": "SubscriberEventRecording",
+		"airingId": "434408556",
+		"eventEnd": "2015-11-28T11:00:00Z",
+		"id": "fd998ebe-9861-470f-a8d1-2001890a527a",
+		"title": "SpongeBob SquarePants",
+		"programId": "2659896",
+		"recordingId": "7434693524c84be3a89394cfa01f5945",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-28T11:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:41Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-28T10:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-28T11:00:00Z",
+		"subscriberUniqueCopyRecordingId": "7f0eb05b990849aba7d6a18b03108a8e",
+		"programStartTime": "2015-11-28T10:30:00Z",
+		"effectiveRecordingEnd": "2015-11-28T11:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:41Z",
+		"duration": 30,
+		"start": "2015-11-28T10:30:00Z",
+		"program": {
+			"id": 113967,
+			"uri": "/cs/v3/programs/113967"
+		},
+		"effectiveStart": "2015-11-28T10:30:00Z",
+		"retentionExpiryDate": "2015-12-03T10:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-28T13:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Bubble Trouble; The Way of the Sponge",
+		"type": "SubscriberEventRecording",
+		"airingId": "434409128",
+		"eventEnd": "2015-11-28T14:00:00Z",
+		"id": "dec6380b-5346-4c8c-819a-5777ee662fa9",
+		"title": "SpongeBob SquarePants",
+		"programId": "21136166",
+		"recordingId": "defd09304081482a9bc468fc0c9b163d",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-28T14:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:41Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-28T13:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-28T14:00:00Z",
+		"subscriberUniqueCopyRecordingId": "8e62e00a0e784b76baf42b0989344a42",
+		"programStartTime": "2015-11-28T13:30:00Z",
+		"effectiveRecordingEnd": "2015-11-28T14:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:41Z",
+		"duration": 30,
+		"start": "2015-11-28T13:30:00Z",
+		"program": {
+			"id": 113977,
+			"uri": "/cs/v3/programs/113977"
+		},
+		"effectiveStart": "2015-11-28T13:30:00Z",
+		"retentionExpiryDate": "2015-12-03T13:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-28T13:55:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "The Krabby Patty That Ate Bikini Bottom; Bubble Buddy Returns",
+		"type": "SubscriberEventRecording",
+		"airingId": "434409038",
+		"eventEnd": "2015-11-28T14:30:00Z",
+		"id": "8c35b33b-f3be-45b9-98ad-11375619ee4d",
+		"title": "SpongeBob SquarePants",
+		"programId": "20021296",
+		"recordingId": "314fb7cd997046079a2628f39c3916b8",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-28T14:30:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:41Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-28T14:00:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-28T14:30:00Z",
+		"subscriberUniqueCopyRecordingId": "c3b9eedae843427a9f9115ee2b950131",
+		"programStartTime": "2015-11-28T14:00:00Z",
+		"effectiveRecordingEnd": "2015-11-28T14:35:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:41Z",
+		"duration": 30,
+		"start": "2015-11-28T14:00:00Z",
+		"program": {
+			"id": 113979,
+			"uri": "/cs/v3/programs/113979"
+		},
+		"effectiveStart": "2015-11-28T14:00:00Z",
+		"retentionExpiryDate": "2015-12-03T14:00:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-29T10:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Patchy the Pirate Presents the SpongeBob SquarePants Christmas Special",
+		"type": "SubscriberEventRecording",
+		"airingId": "434408555",
+		"eventEnd": "2015-11-29T11:00:00Z",
+		"id": "cb59363c-b211-47c4-b296-95449ffbbe13",
+		"title": "SpongeBob SquarePants",
+		"programId": "2659893",
+		"recordingId": "ec777a4270144d04b1a0409829cde323",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-29T11:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:41Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-29T10:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-29T11:00:00Z",
+		"subscriberUniqueCopyRecordingId": "326e85a4bbb347868610430d09bb1ebb",
+		"programStartTime": "2015-11-29T10:30:00Z",
+		"effectiveRecordingEnd": "2015-11-29T11:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:41Z",
+		"duration": 30,
+		"start": "2015-11-29T10:30:00Z",
+		"program": {
+			"id": 114043,
+			"uri": "/cs/v3/programs/114043"
+		},
+		"effectiveStart": "2015-11-29T10:30:00Z",
+		"retentionExpiryDate": "2015-12-04T10:30:00Z"
+	}, {
+		"effectiveRecordingStart": "2015-11-30T10:25:00Z",
+		"scope": "PRIVATE",
+		"episodeTitle": "Survival of the Idiots; Dumped",
+		"type": "SubscriberEventRecording",
+		"airingId": "396013491",
+		"eventEnd": "2015-11-30T11:00:00Z",
+		"id": "04ccc6a7-02dd-4109-ab05-add75c3a33af",
+		"title": "SpongeBob SquarePants",
+		"programId": "2659899",
+		"recordingId": "9bebefcec85d4150bc628bf0b651f86f",
+		"subscriberId": "HongTest1",
+		"end": "2015-11-30T11:00:00Z",
+		"options": {
+			"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+			"endOffset": 0,
+			"startOffset": 0
+		},
+		"lastModified": "2015-11-26T20:21:41Z",
+		"status": {
+			"state": "COMPLETED"
+		},
+		"eventStart": "2015-11-30T10:30:00Z",
+		"channelId": "2412",
+		"effectiveEnd": "2015-11-30T11:00:00Z",
+		"subscriberUniqueCopyRecordingId": "d2533216ab2e48899c9338ccd44618e2",
+		"programStartTime": "2015-11-30T10:30:00Z",
+		"effectiveRecordingEnd": "2015-11-30T11:05:00Z",
+		"size": 0.55,
+		"createdOn": "2015-11-26T20:21:41Z",
+		"duration": 30,
+		"start": "2015-11-30T10:30:00Z",
+		"program": {
+			"id": 114109,
+			"uri": "/cs/v3/programs/114109"
+		},
+		"effectiveStart": "2015-11-30T10:30:00Z",
+		"retentionExpiryDate": "2015-12-05T10:30:00Z"
+	}, 
+	{"effectiveRecordingStart": "2016-01-27T15:54:11Z",
+	"scope": "PRIVATE",
+	"type": "SubscriberEventRecording",
+	"airingId": "27911_27385067_2016-01-28T21:30:00Z",
+	"eventEnd": "2016-01-27T16:00:00Z",
+	"id": "86a40b7d-be1e-45f7-88c1-7d8644473435",
+	"title": "Dirt Trax Television",
+	"programId": "4962863",
+	"recordingId": "631870a576244995854fb7279c76258d",
+	"subscriberId": "ani20",
+	"end": "2016-01-27T16:00:00Z",
+	"options": {
+		"spaceConflictPolicy": "UNTIL_SPACE_NEEDED",
+		"endOffset": 0,
+		"startOffset": 0
+	},
+	"lastModified": "2016-01-27T15:54:11Z",
+	"status": {
+		"state": "COMPLETED"
+	},
+	"eventStart": "2016-01-27T15:54:11Z",
+	"channelId": "27911",
+	"effectiveEnd": "2016-01-27T16:00:00Z",
+	"parent": {
+		"id": "ani20",
+		"uri": "/cs/v3/recordingsets/ani20/"
+	},
+	"programStartTime": "2016-01-27T15:30:00Z",
+	"effectiveRecordingEnd": "2016-01-27T16:00:00Z",
+	"size": 0.81,
+	"createdOn": "2016-01-27T15:54:11Z",
+	"duration": 5.8,
+	"start": "2016-01-27T15:54:11Z",
+	"program": {
+		"id": 37439,
+		"uri": "/cs/v3/programs/37439"
+	},
+	"effectiveStart": "2016-01-27T15:54:11Z",
+	"retentionExpiryDate": "2016-03-17T15:30:00Z"	
+	}]
+}

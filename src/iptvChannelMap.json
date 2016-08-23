@@ -1,0 +1,56 @@
+{
+    "channelMap": [
+        {
+            "lisle": [
+                {
+                    "stationId": "69022204",
+                    "number": "2",
+                    "name": "MTV",
+                    "uri": "10.26.65.140/demo/wbbm/wbbm.m3u8"
+                },
+                {
+                    "stationId": "11653",
+                    "number": "5",
+                    "name": "MTV",
+                    "uri": "10.26.65.140/demo/wmaq/main.m3u8"
+                },
+                {
+                    "stationId": "11670",
+                    "number": "5",
+                    "name": "MTV",
+                    "uri": "10.26.65.140/demo/wls/wls.m3u8"
+                },
+                {
+                    "stationId": "36101",
+                    "number": "204",
+                    "name": "MTV",
+                    "uri": "10.26.65.140/demo/wbbm/wbbm.m3u8"
+                },
+                {
+                    "stationId": "42642",
+                    "number": "216",
+                    "name": "MTV",
+                    "uri": "10.26.65.140/demo/wls/wls.m3u8"
+                },
+                {
+                    "stationId": "58646",
+                    "number": "218",
+                    "name": "MTV",
+                    "uri": "10.26.65.140/demo/wbbm/wbbm.m3u8"
+                }
+            ]
+        },
+        {
+            "lowell": []
+        },
+        {
+            "horsham": []
+        },
+        {
+            "devops": []
+        },
+        {
+            "qa": []
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+	"id": "Flor",
+	"users": [{
+		"id": "Flor",
+		"name": "Flor",
+		"uri": "/sms/v3/subscribers/Flor/users/Flor"
+	}, {
+		"id": "Gaston",
+		"name": "Gaston",
+		"uri": "/sms/v3/subscribers/Flor/users/Gaston"
+	}, {
+		"id": "Diego",
+		"name": "Diego",
+		"uri": "/sms/v3/subscribers/Flor/users/Diego"
+	}, {
+		"id": "Mariano",
+		"name": "Mariano",
+		"uri": "/sms/v3/subscribers/Flor/users/Mariano"
+	}],
+	"status": "ACTIVE",
+	"channelPackages": [{
+		"id": "Flor",
+		"uri": "/sms/v3/channelPackages/Flor"
+	}],
+	"name": "Flor",
+	"servicePackage": {
+		"id": "Flor",
+		"uri": "/sms/v3/servicePackages/Flor"
+	},
+	"statusChangeDate": "2015-12-28T17:33:50.142Z",
+	"adZone": "string",
+	"devices": [{
+		"id": "Test123d",
+		"name": "Test123d",
+		"type": "STB",
+		"uri": "/sms/v3/subscribers/Flor/devices/Test123d"
+	}],
+	"uri": "/sms/v3/subscribers/Flor",
+	"mainUser": "Flor",
+	"header": "{\"X-Arris-CorrelationId\":\"5639119e-c382-40d7-8158-ce4ec46b5b32\",\"X-Arris-Source\":\"VCR-C\"}"
+}
